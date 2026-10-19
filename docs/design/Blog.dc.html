@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Lato:wght@400;700;900&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#F7F1EC; }
+  * { box-sizing:border-box; }
+  a { color:#0D3958; text-decoration:none; }
+  a:hover { color:#5E8F1C; }
+  input, textarea, button, select { font-family:'Lato', system-ui, sans-serif; }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+<div style="fontFamily:'Lato', system-ui, sans-serif; color:#0D3958; background:#F7F1EC; overflowX:hidden">
+
+  <div style="background:#0D3958; color:#fff; fontSize:14px">
+    <div style="maxWidth:1280px; margin:0 auto; padding:9px 32px; display:flex; flexWrap:wrap; gap:6px 28px; alignItems:center; justifyContent:space-between">
+      <span style="color:rgba(255,255,255,0.85)">Open to view Monday–Friday 10am–4pm, weekends by appointment</span>
+      <div style="display:flex; gap:24px; flexWrap:wrap">
+        <a href="tel:094446689" style="color:#fff; fontWeight:700">Phone 444 6689</a>
+        <a href="mailto:enquiries@highgrove.co.nz" style="color:#fff">enquiries@highgrove.co.nz</a>
+      </div>
+    </div>
+  </div>
+
+  <header style="position:sticky; top:0; zIndex:50; background:rgba(247,241,236,0.94); backdropFilter:blur(10px); borderBottom:1px solid #E6DCD2">
+    <div style="maxWidth:1280px; margin:0 auto; padding:16px 32px; display:flex; flexWrap:wrap; alignItems:center; columnGap:32px; rowGap:14px">
+      <a href="Home v2.dc.html" style="display:flex; flexShrink:0"><img src="assets/logo-wide.png" alt="Highgrove Retirement Village &amp; Patrick Ferry House" style="height:48px; width:auto; display:block"></a>
+      <div style="display:flex; alignItems:center; justifyContent:flex-end; gap:12px 24px; marginLeft:auto; flexWrap:nowrap">
+        <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex; flexWrap:nowrap; columnGap:26px; alignItems:center; fontSize:16px; fontWeight:700">
+        <a href="Home v2.dc.html" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Home</a>
+        <div onMouseEnter="{{ openVillage }}" onMouseLeave="{{ closeDD }}" style="position:relative">
+          <button onClick="{{ toggleVillage }}" aria-haspopup="true" style="display:flex; alignItems:center; gap:4px; background:transparent; border:none; padding:10px 0; fontSize:16px; fontWeight:700; color:#0D3958; cursor:pointer; whiteSpace:nowrap" style-hover="color:#5E8F1C">Highgrove Village<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px; display:block; flexShrink:0; position:relative; top:2px"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg></button>
+          <sc-if value="{{ ddVillage }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; top:100%; left:-16px; paddingTop:8px; zIndex:60">
+              <div style="background:#fff; borderRadius:16px; padding:8px; boxShadow:0 18px 40px rgba(13,57,88,0.14); minWidth:220px; display:grid">
+                <a href="Independent Living v3.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Independent Living</a>
+                <a href="Assisted Living.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Assisted Living</a>
+                <a href="Apartments.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Apartments</a>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <a href="Patrick Ferry House.dc.html" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Patrick Ferry House</a>
+        <a href="Facilities.dc.html" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Facilities</a>
+        <div onMouseEnter="{{ openAbout }}" onMouseLeave="{{ closeDD }}" style="position:relative">
+          <button onClick="{{ toggleAbout }}" aria-haspopup="true" style="display:flex; alignItems:center; gap:4px; background:transparent; border:none; padding:10px 0; fontSize:16px; fontWeight:700; color:#5E8F1C; cursor:pointer; whiteSpace:nowrap" style-hover="color:#5E8F1C">About<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px; display:block; flexShrink:0; position:relative; top:2px"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg></button>
+          <sc-if value="{{ ddAbout }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; top:100%; left:-16px; paddingTop:8px; zIndex:60">
+              <div style="background:#fff; borderRadius:16px; padding:8px; boxShadow:0 18px 40px rgba(13,57,88,0.14); minWidth:220px; display:grid">
+                <a href="About.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">About us</a>
+                <a href="Location.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Location</a>
+                <a href="FAQs.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">FAQs</a>
+                <a href="Our Team.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Our Team</a>
+                <a href="Blog.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Blog</a>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <a href="Location.dc.html#enquire" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Contact</a>
+      </nav>
+        </sc-if>
+      <a href="#enquire" style="background:#0D3958; color:#fff; padding:13px 24px; borderRadius:999px; fontSize:16px; fontWeight:700; whiteSpace:nowrap; flexShrink:0" style-hover="background:#16507A; color:#fff">Book a tour</a>
+        <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex; alignItems:center; gap:10px; background:transparent; border:1.5px solid #0D3958; color:#0D3958; padding:11.5px 20px; borderRadius:999px; fontSize:16px; fontWeight:700; cursor:pointer; whiteSpace:nowrap" style-hover="background:#0D3958; color:#fff">{{ menuLabel }}</button>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="borderTop:1px solid #E6DCD2; background:#F7F1EC">
+        <nav style="maxWidth:1280px; margin:0 auto; padding:8px 32px 28px">
+          <a href="Home v2.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Home</a>
+          <div style="padding:18px 0 12px; borderBottom:1px solid #E1D6CB">
+            <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958; marginBottom:6px">Highgrove Village</div>
+            <div style="display:grid; paddingLeft:2px"><a href="Independent Living v3.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Independent Living</a><a href="Assisted Living.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Assisted Living</a><a href="Apartments.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Apartments</a></div>
+          </div>
+          <a href="Patrick Ferry House.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Patrick Ferry House</a>
+          <a href="Facilities.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Facilities</a>
+          <div style="padding:18px 0 12px; borderBottom:1px solid #E1D6CB">
+            <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958; marginBottom:6px">About</div>
+            <div style="display:grid; paddingLeft:2px"><a href="About.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">About us</a><a href="Location.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Location</a><a href="FAQs.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">FAQs</a><a href="Our Team.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Our Team</a><a href="Blog.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Blog</a></div>
+          </div>
+          <a href="Location.dc.html#enquire" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Contact</a>
+          <a href="tel:094446689" style="display:block; paddingTop:22px; fontSize:17px; fontWeight:700; color:#0D3958">Phone 444 6689</a>
+        </nav>
+      </div>
+    </sc-if>
+  </header>
+
+  <section style="maxWidth:1280px; margin:0 auto; padding:36px 32px 0">
+    <nav style="display:flex; gap:10px; fontSize:15px; color:#5B7389; marginBottom:28px; flexWrap:wrap"><a href="Home v2.dc.html" style="color:#5B7389">Home</a><span>/</span><span>About</span><span>/</span><span style="color:#0D3958; fontWeight:700">Blog</span></nav>
+    <div style="display:flex; flexWrap:wrap; gap:32px 56px; alignItems:center; paddingBottom:40px">
+      <div style="flex:1 1 460px; minWidth:0">
+        <p style="margin:0 0 14px; fontSize:14px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Highgrove blog</p>
+        <h1 style="margin:0 0 18px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(42px, 5vw, 64px); lineHeight:1.04; letterSpacing:-0.01em; textWrap:balance">News from the village.</h1>
+        <p style="margin:0; fontSize:19px; lineHeight:1.6; color:#2E4B66; maxWidth:56ch; textWrap:pretty">Stories, events and updates from the Highgrove and Patrick Ferry House family.</p>
+      </div>
+      <img src="assets/loc-gardener.png" alt="A resident with fresh produce from the village gardens" style="width:clamp(190px, 24vw, 300px); height:clamp(190px, 24vw, 300px); objectFit:cover; borderRadius:999px; display:block; flexShrink:0">
+    </div>
+    <div style="display:flex; flexWrap:wrap; gap:10px; alignItems:center; borderTop:1px solid #E1D6CB; padding:18px 0">
+      <span style="fontSize:14px; fontWeight:700; letterSpacing:0.12em; textTransform:uppercase; color:#5B7389; marginRight:8px">Browse</span>
+      <sc-for list="{{ cats }}" as="c" hint-placeholder-count="5">
+        <button onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div style="maxWidth:1280px; margin:0 auto; padding:72px 32px 96px">
+      <a href="Blog Post.dc.html" style="display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap:48px; alignItems:center; color:#0D3958; marginBottom:88px" style-hover="color:#0D3958">
+        <div style="width:100%; aspectRatio:1.35; borderRadius:28px; overflow:hidden"><image-slot id="blog-featured" shape="rounded" radius="28" placeholder="Drop the featured post image"></image-slot></div>
+        <div>
+          <span style="display:inline-block; background:#D0DEBB; padding:7px 14px; borderRadius:999px; fontSize:13px; fontWeight:900; letterSpacing:0.12em; textTransform:uppercase; marginBottom:22px">Featured</span>
+          <div style="display:flex; flexWrap:wrap; gap:8px 14px; alignItems:center; fontSize:14px; fontWeight:700; letterSpacing:0.1em; textTransform:uppercase"><span style="color:#5E8F1C">Category</span><span style="width:4px; height:4px; borderRadius:999px; background:#9DB0BF"></span><span style="color:#5B7389">DD Month 2026</span></div>
+          <h2 style="margin:16px 0 18px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(34px, 3.8vw, 50px); lineHeight:1.08">Featured post title goes here, up to two lines</h2>
+          <p style="margin:0 0 28px; fontSize:18px; lineHeight:1.65; color:#2E4B66; maxWidth:50ch">A short summary of the featured post, two or three sentences long. Tell readers what it's about and why it's worth a read.</p>
+          <span style="background:#0D3958; color:#fff; padding:16px 28px; borderRadius:999px; fontSize:16px; fontWeight:700; display:inline-block">Read the article</span>
+        </div>
+      </a>
+      <div style="display:flex; justifyContent:space-between; alignItems:flex-end; gap:24px; marginBottom:36px; borderBottom:1px solid #E1D6CB; paddingBottom:20px">
+        <h2 style="margin:0; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(30px, 3.2vw, 40px)">Latest posts</h2>
+      </div>
+      <div style="display:grid; gridTemplateColumns:repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap:56px 32px">
+        <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+        <a href="Blog Post.dc.html" style="display:flex; flexDirection:column; gap:16px; color:#0D3958" style-hover="color:#0D3958">
+          <div style="width:100%; aspectRatio:1.45; borderRadius:20px; overflow:hidden"><image-slot id="{{ p.slot }}" shape="rounded" radius="20" placeholder="Drop a post image"></image-slot></div>
+          <div style="display:flex; flexWrap:wrap; gap:8px 14px; alignItems:center; fontSize:14px; fontWeight:700; letterSpacing:0.1em; textTransform:uppercase"><span style="color:#5E8F1C">{{ p.cat }}</span><span style="width:4px; height:4px; borderRadius:999px; background:#9DB0BF"></span><span style="color:#5B7389">{{ p.date }}</span></div>
+          <h3 style="margin:0; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:28px; lineHeight:1.15">{{ p.title }}</h3>
+          <p style="margin:0; fontSize:17px; lineHeight:1.6; color:#2E4B66">{{ p.excerpt }}</p>
+          <span style="fontSize:16px; fontWeight:700; borderBottom:2px solid #7BB729; paddingBottom:2px; alignSelf:flex-start">Read more →</span>
+        </a>
+        </sc-for>
+      </div>
+      <sc-if value="{{ noPosts }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0; padding:48px 0; textAlign:center; fontSize:18px; color:#5B7389">No posts in this category yet.</p>
+      </sc-if>
+      <nav aria-label="Pagination" style="display:flex; gap:10px; justifyContent:center; alignItems:center; marginTop:72px">
+        <span style="width:46px; height:46px; borderRadius:999px; background:#0D3958; color:#fff; display:flex; alignItems:center; justifyContent:center; fontWeight:700">1</span>
+        <a href="#" style="width:46px; height:46px; borderRadius:999px; border:1px solid #E1D6CB; display:flex; alignItems:center; justifyContent:center; fontWeight:700" style-hover="border:1px solid #0D3958">2</a>
+        <a href="#" style="width:46px; height:46px; borderRadius:999px; border:1px solid #E1D6CB; display:flex; alignItems:center; justifyContent:center; fontWeight:700" style-hover="border:1px solid #0D3958">3</a>
+        <a href="#" style="padding:12px 22px; borderRadius:999px; border:1px solid #E1D6CB; fontWeight:700; marginLeft:6px" style-hover="border:1px solid #0D3958">Next →</a>
+      </nav>
+    </div>
+  </section>
+
+  <section style="maxWidth:1280px; margin:0 auto; padding:96px 32px">
+    <div style="background:#0D3958; color:#fff; borderRadius:32px; padding:56px; display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:40px; alignItems:center">
+      <div><p style="margin:0 0 14px; fontSize:14px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#D0DEBB">Come and see for yourself</p><h2 style="margin:0; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(32px, 3.6vw, 46px); lineHeight:1.1">Become part of the family.</h2></div>
+      <div><p style="margin:0 0 24px; fontSize:18px; lineHeight:1.6; color:rgba(255,255,255,0.88)">Available to view Monday to Friday 10am–4pm, and weekends by appointment.</p>
+      <a href="#enquire" style="background:#fff; color:#0D3958; padding:15px 28px; borderRadius:999px; fontSize:16px; fontWeight:700; display:inline-block" style-hover="background:#D0DEBB; color:#0D3958">Book a tour today</a></div>
+    </div>
+  </section>
+
+  <section id="enquire" style="scrollMarginTop:110px; maxWidth:1280px; margin:0 auto; padding:104px 32px; display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap:64px; alignItems:start">
+    <div>
+      <p style="margin:0 0 16px; fontSize:14px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Request information</p>
+      <h2 style="margin:0 0 24px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(40px, 4.6vw, 60px); lineHeight:1.06">Become part of the family.</h2>
+      <p style="margin:0 0 36px; fontSize:19px; lineHeight:1.6; color:#2E4B66; maxWidth:44ch">Tell us a little about what you're looking for and we'll send current availability, or arrange a time to show you and your family through.</p>
+      <div style="display:grid; borderTop:1px solid #E1D6CB">
+        <div style="display:grid; gridTemplateColumns:120px 1fr; gap:16px; padding:18px 0; borderBottom:1px solid #E1D6CB; fontSize:17px"><span style="fontWeight:700">Phone</span><a href="tel:094446689">09 444 6689</a></div>
+        <div style="display:grid; gridTemplateColumns:120px 1fr; gap:16px; padding:18px 0; borderBottom:1px solid #E1D6CB; fontSize:17px"><span style="fontWeight:700">Email</span><a href="mailto:enquiries@highgrove.co.nz">enquiries@highgrove.co.nz</a></div>
+        <div style="display:grid; gridTemplateColumns:120px 1fr; gap:16px; padding:18px 0; borderBottom:1px solid #E1D6CB; fontSize:17px"><span style="fontWeight:700">Find us</span><span style="lineHeight:1.5">119 Albany Highway, Unsworth Heights, Albany</span></div>
+      </div>
+    </div>
+    <div style="background:#fff; borderRadius:28px; padding:40px; boxShadow:0 20px 50px rgba(13,57,88,0.08)">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:48px 0; textAlign:center">
+          <img src="assets/logo-icon.png" alt="" style="width:48px; height:48px; display:block; margin:0 auto 20px">
+          <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:34px; marginBottom:12px">Thank you</div>
+          <p style="fontSize:18px; color:#2E4B66; margin:0">We'll be in touch within one working day.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <div style="display:grid; gridTemplateColumns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px">
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">First name
+              <input type="text" placeholder="Jane" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">Last name
+              <input type="text" placeholder="Smith" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">Email
+              <input type="email" placeholder="jane@example.com" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">Phone
+              <input type="tel" placeholder="021 123 4567" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+          </div>
+          <div style="marginTop:22px; fontSize:15px; fontWeight:700">I'm interested in</div>
+          <div style="display:flex; gap:10px; flexWrap:wrap; marginTop:12px">
+            <sc-for list="{{ interests }}" as="opt" hint-placeholder-count="4">
+              <button onClick="{{ opt.toggle }}" style="{{ opt.style }}">{{ opt.label }}</button>
+            </sc-for>
+          </div>
+          <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700; marginTop:22px">Your message <span style="fontWeight:400; color:#5B7389">(optional)</span>
+            <textarea rows="4" placeholder="A question, or a good time to visit…" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; resize:vertical; background:#FBF8F5; fontFamily:'Lato', system-ui, sans-serif" style-focus="border:1px solid #0D3958"></textarea>
+          </label>
+          <button onClick="{{ submit }}" style="marginTop:28px; width:100%; background:#0D3958; color:#fff; border:none; padding:19px; borderRadius:999px; fontSize:18px; fontWeight:700; cursor:pointer" style-hover="background:#16507A">Request information</button>
+          <p style="margin:14px 0 0; fontSize:14px; color:#5B7389; textAlign:center">No obligation. We never share your details.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="background:#fff; borderTop:1px solid #E6DCD2">
+    <div style="maxWidth:1280px; margin:0 auto; padding:64px 32px 48px; display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap:40px">
+      <div style="minWidth:0">
+        <img src="assets/logo-wide.png" alt="Highgrove Retirement Village &amp; Patrick Ferry House" style="height:56px; width:auto; maxWidth:100%; display:block">
+        <p style="margin:22px 0 0; fontSize:16px; lineHeight:1.6; color:#2E4B66; maxWidth:38ch">A family owned and operated boutique retirement village in Albany, alongside Patrick Ferry House hospital.</p>
+      </div>
+      <div>
+        <div style="fontWeight:900; fontSize:14px; letterSpacing:0.12em; textTransform:uppercase; marginBottom:16px">Explore</div>
+        <div style="display:grid; gap:10px; fontSize:16px">
+          <a href="Independent Living v3.dc.html">Independent living</a>
+          <a href="Assisted Living.dc.html">Care suites</a>
+          <a href="Patrick Ferry House.dc.html">Patrick Ferry House</a>
+          <a href="Facilities.dc.html">Life at Highgrove</a>
+        </div>
+      </div>
+      <div>
+        <div style="fontWeight:900; fontSize:14px; letterSpacing:0.12em; textTransform:uppercase; marginBottom:16px">Visit</div>
+        <div style="display:grid; gap:10px; fontSize:16px; lineHeight:1.5; color:#2E4B66">
+          <span>119 Albany Highway or 47 Condor Place, Unsworth Heights, Albany</span>
+          <a href="tel:094446689" style="fontWeight:700">444 6689</a>
+          <a href="mailto:enquiries@highgrove.co.nz">enquiries@highgrove.co.nz</a>
+        </div>
+      </div>
+    </div>
+    <div style="background:#0D3958; color:rgba(255,255,255,0.8); fontSize:14px">
+      <div style="maxWidth:1280px; margin:0 auto; padding:16px 32px; display:flex; flexWrap:wrap; gap:8px 24px; justifyContent:space-between">
+        <span>© 2026 Ferry Enterprises Ltd</span>
+        <span>Member of the Retirement Villages Association of New Zealand</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { cat: 'All', open: 0, q: 0, picked: [], sent: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280, menu: false, dd: null };
+  onResize = () => this.setState({ w: window.innerWidth, menu: window.innerWidth < 1240 ? this.state.menu : false });
+  quotes = [
+    { t: '“Thanks Patrick Ferry House, we’re so lucky to have picked you!”', n: 'Janet Templeman & Leonie Gallaher' },
+    { t: '“Thanks for the consideration and dedication you show towards my Dad. His profession was one of caring for people less fortunate, so it is nice to know he is now on the receiving end.”', n: 'Megan' },
+    { t: '“Thank you for the good care you have given Mike over the last week. I appreciate the attention you give him, which gives me the opportunity to recharge my batteries.”', n: 'Pat Scott' },
+    { t: '“Thank you for your warm and welcoming manner. The assistance and support you offered us was appreciated and first class.”', n: 'Lester Family' }
+  ];
+  posts = [
+    { slot: 'blog-card-1', cat: 'Village life', date: 'DD Month 2026', title: 'Blog post title goes here', excerpt: 'A one or two sentence summary of the post. It shows on the blog page to help readers decide what to read.' },
+    { slot: 'blog-card-2', cat: 'Events', date: 'DD Month 2026', title: 'Blog post title goes here', excerpt: 'A one or two sentence summary of the post. It shows on the blog page to help readers decide what to read.' },
+    { slot: 'blog-card-3', cat: 'Health & care', date: 'DD Month 2026', title: 'Blog post title goes here', excerpt: 'A one or two sentence summary of the post. It shows on the blog page to help readers decide what to read.' },
+    { slot: 'blog-card-4', cat: 'News', date: 'DD Month 2026', title: 'Blog post title goes here', excerpt: 'A one or two sentence summary of the post. It shows on the blog page to help readers decide what to read.' },
+    { slot: 'blog-card-5', cat: 'Village life', date: 'DD Month 2026', title: 'Blog post title goes here', excerpt: 'A one or two sentence summary of the post. It shows on the blog page to help readers decide what to read.' },
+    { slot: 'blog-card-6', cat: 'Events', date: 'DD Month 2026', title: 'Blog post title goes here', excerpt: 'A one or two sentence summary of the post. It shows on the blog page to help readers decide what to read.' }
+  ];
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState(s => ({ q: (s.q + 1) % this.quotes.length })), 7000);
+    window.addEventListener('resize', this.onResize); this.onResize();
+  }
+  componentWillUnmount() { clearInterval(this.timer); window.removeEventListener('resize', this.onResize); }
+  renderVals() {
+    const q = this.quotes[this.state.q];
+    const hero = this.props.heroImage ?? 'Garden';
+    const labels = ['One bedroom apartment', 'Two bedroom apartment', 'Patrick Ferry House', 'Other'];
+    const narrow = this.state.w < 1240;
+    const dd = this.state.dd;
+    const setDD = k => () => this.setState({ dd: k });
+    const tog = k => () => this.setState(s => ({ dd: s.dd === k ? null : k }));
+    return {
+      wide: !narrow, narrow,
+      ddVillage: dd === 'Village', ddAbout: dd === 'About',
+      openVillage: setDD('Village'), openAbout: setDD('About'),
+      toggleVillage: tog('Village'), toggleAbout: tog('About'),
+      closeDD: () => this.setState({ dd: null }),
+      menuOpen: narrow && this.state.menu,
+      menuLabel: this.state.menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      closeMenu: () => this.setState({ menu: false }),
+      heroGarden: hero === 'Garden',
+      heroPool: hero === 'Pool',
+      showOffer: this.props.showOffer ?? true,
+      quoteText: q.t, quoteName: q.n,
+      sent: this.state.sent, notSent: !this.state.sent,
+      dots: this.quotes.map((_, i) => ({
+        go: () => { clearInterval(this.timer); this.setState({ q: i }); },
+        style: { width: i === this.state.q ? 26 : 9, height: 9, borderRadius: 999, border: 'none', padding: 0, cursor: 'pointer',
+          background: i === this.state.q ? '#0D3958' : '#D0DEBB', transition: 'all .3s ease' }
+      })),
+      interests: labels.map(label => {
+        const on = this.state.picked.includes(label);
+        return {
+          label,
+          toggle: () => this.setState(s => ({ picked: on ? s.picked.filter(x => x !== label) : s.picked.concat(label) })),
+          style: { padding: '11px 18px', borderRadius: 999, fontSize: 15, fontWeight: 700, cursor: 'pointer',
+            border: on ? '1.5px solid #0D3958' : '1.5px solid #DCD0C4', background: on ? '#0D3958' : '#FBF8F5',
+            color: on ? '#fff' : '#0D3958', transition: 'all .18s ease' }
+        };
+      }),
+      faqs: (this.faqs || []).map((f, i) => ({ q: f.q, a: f.a, pending: !f.a, isOpen: this.state.open === i,
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })),
+        icon: this.state.open === i ? '−' : '+' })),
+      cats: ['All', 'Village life', 'Events', 'Health & care', 'News'].map(c => {
+        const on = this.state.cat === c;
+        return { label: c, pick: () => this.setState({ cat: c }), style: { padding: '9px 18px', borderRadius: 999, fontSize: 15, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap',
+          border: on ? '1px solid #0D3958' : '1px solid #E1D6CB', background: on ? '#0D3958' : '#fff', color: on ? '#fff' : '#0D3958', transition: 'all .18s ease' } };
+      }),
+      posts: this.posts.filter(p => this.state.cat === 'All' || p.cat === this.state.cat),
+      noPosts: this.state.cat !== 'All' && !this.posts.some(p => p.cat === this.state.cat),
+      related: this.posts.slice(0, 3),
+      submit: () => this.setState({ sent: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

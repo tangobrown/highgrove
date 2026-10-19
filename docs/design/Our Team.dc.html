@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Lato:wght@400;700;900&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#F7F1EC; }
+  * { box-sizing:border-box; }
+  a { color:#0D3958; text-decoration:none; }
+  a:hover { color:#5E8F1C; }
+  input, textarea, button, select { font-family:'Lato', system-ui, sans-serif; }
+</style>
+</helmet>
+<div style="fontFamily:'Lato', system-ui, sans-serif; color:#0D3958; background:#F7F1EC; overflowX:hidden">
+
+  <div style="background:#0D3958; color:#fff; fontSize:14px">
+    <div style="maxWidth:1280px; margin:0 auto; padding:9px 32px; display:flex; flexWrap:wrap; gap:6px 28px; alignItems:center; justifyContent:space-between">
+      <span style="color:rgba(255,255,255,0.85)">Open to view Monday–Friday 10am–4pm, weekends by appointment</span>
+      <div style="display:flex; gap:24px; flexWrap:wrap">
+        <a href="tel:094446689" style="color:#fff; fontWeight:700">Phone 444 6689</a>
+        <a href="mailto:enquiries@highgrove.co.nz" style="color:#fff">enquiries@highgrove.co.nz</a>
+      </div>
+    </div>
+  </div>
+
+  <header style="position:sticky; top:0; zIndex:50; background:rgba(247,241,236,0.94); backdropFilter:blur(10px); borderBottom:1px solid #E6DCD2">
+    <div style="maxWidth:1280px; margin:0 auto; padding:16px 32px; display:flex; flexWrap:wrap; alignItems:center; columnGap:32px; rowGap:14px">
+      <a href="Home v2.dc.html" style="display:flex; flexShrink:0"><img src="assets/logo-wide.png" alt="Highgrove Retirement Village &amp; Patrick Ferry House" style="height:48px; width:auto; display:block"></a>
+      <div style="display:flex; alignItems:center; justifyContent:flex-end; gap:12px 24px; marginLeft:auto; flexWrap:nowrap">
+        <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+        <nav style="display:flex; flexWrap:nowrap; columnGap:26px; alignItems:center; fontSize:16px; fontWeight:700">
+        <a href="Home v2.dc.html" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Home</a>
+        <div onMouseEnter="{{ openVillage }}" onMouseLeave="{{ closeDD }}" style="position:relative">
+          <button onClick="{{ toggleVillage }}" aria-haspopup="true" style="display:flex; alignItems:center; gap:4px; background:transparent; border:none; padding:10px 0; fontSize:16px; fontWeight:700; color:#0D3958; cursor:pointer; whiteSpace:nowrap" style-hover="color:#5E8F1C">Highgrove Village<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px; display:block; flexShrink:0; position:relative; top:2px"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg></button>
+          <sc-if value="{{ ddVillage }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; top:100%; left:-16px; paddingTop:8px; zIndex:60">
+              <div style="background:#fff; borderRadius:16px; padding:8px; boxShadow:0 18px 40px rgba(13,57,88,0.14); minWidth:220px; display:grid">
+                <a href="Independent Living v3.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Independent Living</a>
+                <a href="Assisted Living.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Assisted Living</a>
+                <a href="Apartments.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Apartments</a>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <a href="Patrick Ferry House.dc.html" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Patrick Ferry House</a>
+        <a href="Facilities.dc.html" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Facilities</a>
+        <div onMouseEnter="{{ openAbout }}" onMouseLeave="{{ closeDD }}" style="position:relative">
+          <button onClick="{{ toggleAbout }}" aria-haspopup="true" style="display:flex; alignItems:center; gap:4px; background:transparent; border:none; padding:10px 0; fontSize:16px; fontWeight:700; color:#5E8F1C; cursor:pointer; whiteSpace:nowrap" style-hover="color:#5E8F1C">About<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px; display:block; flexShrink:0; position:relative; top:2px"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg></button>
+          <sc-if value="{{ ddAbout }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; top:100%; left:-16px; paddingTop:8px; zIndex:60">
+              <div style="background:#fff; borderRadius:16px; padding:8px; boxShadow:0 18px 40px rgba(13,57,88,0.14); minWidth:220px; display:grid">
+                <a href="About.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">About us</a>
+                <a href="Location.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Location</a>
+                <a href="FAQs.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">FAQs</a>
+                <a href="Our Team.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Our Team</a>
+                <a href="Blog.dc.html" style="display:block; padding:11px 16px; borderRadius:10px; fontSize:16px; fontWeight:400; color:#0D3958; whiteSpace:nowrap" style-hover="background:#F7F1EC; color:#0D3958">Blog</a>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <a href="Location.dc.html#enquire" style="color:#0D3958; whiteSpace:nowrap; padding:10px 0" style-hover="color:#5E8F1C">Contact</a>
+      </nav>
+        </sc-if>
+      <a href="#enquire" style="background:#0D3958; color:#fff; padding:13px 24px; borderRadius:999px; fontSize:16px; fontWeight:700; whiteSpace:nowrap; flexShrink:0" style-hover="background:#16507A; color:#fff">Book a tour</a>
+        <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggleMenu }}" aria-label="Menu" style="display:flex; alignItems:center; gap:10px; background:transparent; border:1.5px solid #0D3958; color:#0D3958; padding:11.5px 20px; borderRadius:999px; fontSize:16px; fontWeight:700; cursor:pointer; whiteSpace:nowrap" style-hover="background:#0D3958; color:#fff">{{ menuLabel }}</button>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="borderTop:1px solid #E6DCD2; background:#F7F1EC">
+        <nav style="maxWidth:1280px; margin:0 auto; padding:8px 32px 28px">
+          <a href="Home v2.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Home</a>
+          <div style="padding:18px 0 12px; borderBottom:1px solid #E1D6CB">
+            <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958; marginBottom:6px">Highgrove Village</div>
+            <div style="display:grid; paddingLeft:2px"><a href="Independent Living v3.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Independent Living</a><a href="Assisted Living.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Assisted Living</a><a href="Apartments.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Apartments</a></div>
+          </div>
+          <a href="Patrick Ferry House.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Patrick Ferry House</a>
+          <a href="Facilities.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Facilities</a>
+          <div style="padding:18px 0 12px; borderBottom:1px solid #E1D6CB">
+            <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958; marginBottom:6px">About</div>
+            <div style="display:grid; paddingLeft:2px"><a href="About.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">About us</a><a href="Location.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Location</a><a href="FAQs.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">FAQs</a><a href="Our Team.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Our Team</a><a href="Blog.dc.html" onClick="{{ closeMenu }}" style="display:block; padding:9px 0; fontSize:17px; color:#2E4B66" style-hover="color:#5E8F1C">Blog</a></div>
+          </div>
+          <a href="Location.dc.html#enquire" onClick="{{ closeMenu }}" style="display:block; padding:18px 0; borderBottom:1px solid #E1D6CB; fontFamily:'Playfair Display', Georgia, serif; fontSize:26px; color:#0D3958" style-hover="color:#5E8F1C">Contact</a>
+          <a href="tel:094446689" style="display:block; paddingTop:22px; fontSize:17px; fontWeight:700; color:#0D3958">Phone 444 6689</a>
+        </nav>
+      </div>
+    </sc-if>
+  </header>
+
+  <section style="maxWidth:1280px; margin:0 auto; padding:36px 32px 0">
+    <nav style="display:flex; gap:10px; fontSize:15px; color:#5B7389; marginBottom:28px; flexWrap:wrap"><a href="Home v2.dc.html" style="color:#5B7389">Home</a><span>/</span><span>About</span><span>/</span><span style="color:#0D3958; fontWeight:700">Our team</span></nav>
+    <div style="display:flex; flexWrap:wrap; gap:32px 56px; alignItems:center; paddingBottom:40px">
+      <div style="flex:1 1 460px; minWidth:0">
+        <p style="margin:0 0 14px; fontSize:14px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">The Highgrove family</p>
+        <h1 style="margin:0 0 18px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(42px, 5vw, 64px); lineHeight:1.04; letterSpacing:-0.01em; textWrap:balance">Friendly, approachable, caring.</h1>
+        <p style="margin:0; fontSize:19px; lineHeight:1.6; color:#2E4B66; maxWidth:56ch; textWrap:pretty">Qualities our team have in abundance. Experts in their respective fields, our people see Highgrove as their second home.</p>
+      </div>
+      <img src="assets/about-group.png" alt="Highgrove residents together" style="width:clamp(190px, 24vw, 300px); height:clamp(190px, 24vw, 300px); objectFit:cover; objectPosition:50% 40%; borderRadius:999px; display:block; flexShrink:0">
+    </div>
+    <div style="display:flex; flexWrap:wrap; gap:10px; alignItems:center; borderTop:1px solid #E1D6CB; padding:18px 0">
+      <span style="fontSize:14px; fontWeight:700; letterSpacing:0.12em; textTransform:uppercase; color:#5B7389; marginRight:8px">On this page</span>
+        <a href="#team" style="background:#fff; border:1px solid #E1D6CB; padding:9px 18px; borderRadius:999px; fontSize:15px; fontWeight:700; color:#0D3958; whiteSpace:nowrap" style-hover="background:#0D3958; color:#fff; border:1px solid #0D3958">Meet the team</a>
+        <a href="tel:094446689" style="background:#fff; border:1px solid #E1D6CB; padding:9px 18px; borderRadius:999px; fontSize:15px; fontWeight:700; color:#0D3958; whiteSpace:nowrap" style-hover="background:#0D3958; color:#fff; border:1px solid #0D3958">Call 09 444 6689</a>
+        <a href="#enquire" style="background:#fff; border:1px solid #E1D6CB; padding:9px 18px; borderRadius:999px; fontSize:15px; fontWeight:700; color:#0D3958; whiteSpace:nowrap" style-hover="background:#0D3958; color:#fff; border:1px solid #0D3958">Enquire</a>
+    </div>
+  </section>
+  <section id="team" style="scrollMarginTop:110px; background:#fff"><div style="maxWidth:1280px; margin:0 auto; padding:96px 32px"><div style="maxWidth:760px; marginBottom:48px"><p style="margin:0 0 16px; fontSize:14px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Operations team</p><h2 style="margin:0 0 0px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(36px, 4.2vw, 52px); lineHeight:1.08">The family behind the village</h2></div><div style="display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap:24px"><article style="background:#F7F1EC; borderRadius:28px; padding:36px; display:grid; gridTemplateColumns:112px 1fr; gap:28px; alignItems:start">
+      <img src="assets/team-geraldine.png" alt="Geraldine Ferry" style="width:112px; height:112px; borderRadius:999px; objectFit:cover; objectPosition:50% 25%; display:block">
+      <div><h3 style="margin:0 0 6px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:28px; lineHeight:1.15">Geraldine Ferry</h3><p style="margin:0 0 18px; fontSize:13px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Director</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">Co-founder, owner and matriarch. Born in Singapore and a former UK registered nurse, Gerrie came to New Zealand with her Scottish husband Patrick and family in 1994.</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">Six years running a 60-bed hotel in London gave her a deep understanding of consistent, quality service — something that inspired her vision for Greenview Park and Highgrove.</p></div>
+    </article>
+<article style="background:#F7F1EC; borderRadius:28px; padding:36px; display:grid; gridTemplateColumns:112px 1fr; gap:28px; alignItems:start">
+      <img src="assets/team-khim.png" alt="Khim Fletcher (nee Ferry)" style="width:112px; height:112px; borderRadius:999px; objectFit:cover; objectPosition:50% 25%; display:block">
+      <div><h3 style="margin:0 0 6px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:28px; lineHeight:1.15">Khim Fletcher (nee Ferry)</h3><p style="margin:0 0 18px; fontSize:13px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Managing Director</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">Born in London and raised in France, Khim was groomed for her role from high school, working every holiday from receptionist to cleaning, cooking and onsite management.</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">A University of Auckland graduate (BCom Finance and BA French), she joined the management team in 2004 and became Managing Director in 2007. Married to Andrew with three young children, Khim knows what close family ties mean.</p></div>
+    </article>
+<article style="background:#F7F1EC; borderRadius:28px; padding:36px; display:grid; gridTemplateColumns:112px 1fr; gap:28px; alignItems:start">
+      <img src="assets/team-patrick.png" alt="Patrick Ferry" style="width:112px; height:112px; borderRadius:999px; objectFit:cover; objectPosition:50% 25%; display:block">
+      <div><h3 style="margin:0 0 6px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:28px; lineHeight:1.15">Patrick Ferry</h3><p style="margin:0 0 18px; fontSize:13px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Operations Manager</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">Patrick was introduced to the family business early — from “assisting” the builders on site as a teenager to working as a labourer through university. He's still known to cover for the maintenance team.</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">With a bachelor's degree in property and four years as a site and project manager in the UK, Patrick returned to New Zealand and the family business in 2012.</p></div>
+    </article>
+<article style="background:#F7F1EC; borderRadius:28px; padding:36px; display:grid; gridTemplateColumns:112px 1fr; gap:28px; alignItems:start">
+      <img src="assets/team-linda.png" alt="Linda McFadyen" style="width:112px; height:112px; borderRadius:999px; objectFit:cover; objectPosition:50% 25%; display:block">
+      <div><h3 style="margin:0 0 6px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:28px; lineHeight:1.15">Linda McFadyen</h3><p style="margin:0 0 18px; fontSize:13px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">General Manager</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">A long-serving member of the team, Linda started as a part-time office assistant in 2006 and worked her way up to General Manager and Director. A former software developer, she keeps everything ticking along smoothly.</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">Originally from Scotland, Linda loves that no two days are the same — and most of all the people, who together create the warm, welcoming family atmosphere.</p></div>
+    </article>
+<article style="background:#F7F1EC; borderRadius:28px; padding:36px; display:grid; gridTemplateColumns:112px 1fr; gap:28px; alignItems:start">
+      <img src="assets/team-andrew.png" alt="Andrew Fletcher" style="width:112px; height:112px; borderRadius:999px; objectFit:cover; objectPosition:50% 25%; display:block">
+      <div><h3 style="margin:0 0 6px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:28px; lineHeight:1.15">Andrew Fletcher</h3><p style="margin:0 0 18px; fontSize:13px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Legal Counsel / Contracts &amp; Compliance</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">Andrew holds degrees in Law and Science (Ecology) from the University of Otago, and was a solicitor with Auckland firms Simpson Grierson and Sanderson Weir before joining the family business in 2011.</p><p style="margin:0 0 14px; fontSize:16px; lineHeight:1.65; color:#2E4B66">He looks after all aspects of contracting and compliance, and together with his wife Khim is raising their three young children.</p></div>
+    </article></div></div></section>
+
+  <section style="background:#fff">
+    <div style="maxWidth:880px; margin:0 auto; padding:96px 32px; textAlign:center">
+      <img src="assets/logo-icon.png" alt="" style="width:44px; height:44px; display:block; margin:0 auto 28px">
+      <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:clamp(24px, 2.8vw, 34px); lineHeight:1.45; fontStyle:italic; textWrap:pretty">{{ quoteText }}</div>
+      <div style="marginTop:26px; fontSize:15px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">{{ quoteName }}</div>
+      <div style="display:flex; gap:10px; justifyContent:center; marginTop:28px">
+        <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="4">
+          <button onClick="{{ dot.go }}" style="{{ dot.style }}" aria-label="Show testimonial"></button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="enquire" style="scrollMarginTop:110px; maxWidth:1280px; margin:0 auto; padding:104px 32px; display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap:64px; alignItems:start">
+    <div>
+      <p style="margin:0 0 16px; fontSize:14px; fontWeight:700; letterSpacing:0.14em; textTransform:uppercase; color:#5E8F1C">Request information</p>
+      <h2 style="margin:0 0 24px; fontFamily:'Playfair Display', Georgia, serif; fontWeight:400; fontSize:clamp(40px, 4.6vw, 60px); lineHeight:1.06">Become part of the family.</h2>
+      <p style="margin:0 0 36px; fontSize:19px; lineHeight:1.6; color:#2E4B66; maxWidth:44ch">Tell us a little about what you're looking for and we'll send current availability, or arrange a time to show you and your family through.</p>
+      <div style="display:grid; borderTop:1px solid #E1D6CB">
+        <div style="display:grid; gridTemplateColumns:120px 1fr; gap:16px; padding:18px 0; borderBottom:1px solid #E1D6CB; fontSize:17px"><span style="fontWeight:700">Phone</span><a href="tel:094446689">09 444 6689</a></div>
+        <div style="display:grid; gridTemplateColumns:120px 1fr; gap:16px; padding:18px 0; borderBottom:1px solid #E1D6CB; fontSize:17px"><span style="fontWeight:700">Email</span><a href="mailto:enquiries@highgrove.co.nz">enquiries@highgrove.co.nz</a></div>
+        <div style="display:grid; gridTemplateColumns:120px 1fr; gap:16px; padding:18px 0; borderBottom:1px solid #E1D6CB; fontSize:17px"><span style="fontWeight:700">Find us</span><span style="lineHeight:1.5">119 Albany Highway, Unsworth Heights, Albany</span></div>
+      </div>
+    </div>
+    <div style="background:#fff; borderRadius:28px; padding:40px; boxShadow:0 20px 50px rgba(13,57,88,0.08)">
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="padding:48px 0; textAlign:center">
+          <img src="assets/logo-icon.png" alt="" style="width:48px; height:48px; display:block; margin:0 auto 20px">
+          <div style="fontFamily:'Playfair Display', Georgia, serif; fontSize:34px; marginBottom:12px">Thank you</div>
+          <p style="fontSize:18px; color:#2E4B66; margin:0">We'll be in touch within one working day.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <div style="display:grid; gridTemplateColumns:repeat(auto-fit, minmax(200px, 1fr)); gap:16px">
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">First name
+              <input type="text" placeholder="Jane" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">Last name
+              <input type="text" placeholder="Smith" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">Email
+              <input type="email" placeholder="jane@example.com" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+            <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700">Phone
+              <input type="tel" placeholder="021 123 4567" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; background:#FBF8F5" style-focus="border:1px solid #0D3958">
+            </label>
+          </div>
+          <div style="marginTop:22px; fontSize:15px; fontWeight:700">I'm interested in</div>
+          <div style="display:flex; gap:10px; flexWrap:wrap; marginTop:12px">
+            <sc-for list="{{ interests }}" as="opt" hint-placeholder-count="4">
+              <button onClick="{{ opt.toggle }}" style="{{ opt.style }}">{{ opt.label }}</button>
+            </sc-for>
+          </div>
+          <label style="display:grid; gap:8px; fontSize:15px; fontWeight:700; marginTop:22px">Your message <span style="fontWeight:400; color:#5B7389">(optional)</span>
+            <textarea rows="4" placeholder="A question, or a good time to visit…" style="border:1px solid #DCD0C4; borderRadius:12px; padding:15px 16px; fontSize:17px; color:#0D3958; outline:none; resize:vertical; background:#FBF8F5; fontFamily:'Lato', system-ui, sans-serif" style-focus="border:1px solid #0D3958"></textarea>
+          </label>
+          <button onClick="{{ submit }}" style="marginTop:28px; width:100%; background:#0D3958; color:#fff; border:none; padding:19px; borderRadius:999px; fontSize:18px; fontWeight:700; cursor:pointer" style-hover="background:#16507A">Request information</button>
+          <p style="margin:14px 0 0; fontSize:14px; color:#5B7389; textAlign:center">No obligation. We never share your details.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <footer style="background:#fff; borderTop:1px solid #E6DCD2">
+    <div style="maxWidth:1280px; margin:0 auto; padding:64px 32px 48px; display:grid; gridTemplateColumns:repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap:40px">
+      <div style="minWidth:0">
+        <img src="assets/logo-wide.png" alt="Highgrove Retirement Village &amp; Patrick Ferry House" style="height:56px; width:auto; maxWidth:100%; display:block">
+        <p style="margin:22px 0 0; fontSize:16px; lineHeight:1.6; color:#2E4B66; maxWidth:38ch">A family owned and operated boutique retirement village in Albany, alongside Patrick Ferry House hospital.</p>
+      </div>
+      <div>
+        <div style="fontWeight:900; fontSize:14px; letterSpacing:0.12em; textTransform:uppercase; marginBottom:16px">Explore</div>
+        <div style="display:grid; gap:10px; fontSize:16px">
+          <a href="Independent Living v3.dc.html">Independent living</a>
+          <a href="Assisted Living.dc.html">Care suites</a>
+          <a href="Patrick Ferry House.dc.html">Patrick Ferry House</a>
+          <a href="Facilities.dc.html">Life at Highgrove</a>
+        </div>
+      </div>
+      <div>
+        <div style="fontWeight:900; fontSize:14px; letterSpacing:0.12em; textTransform:uppercase; marginBottom:16px">Visit</div>
+        <div style="display:grid; gap:10px; fontSize:16px; lineHeight:1.5; color:#2E4B66">
+          <span>119 Albany Highway or 47 Condor Place, Unsworth Heights, Albany</span>
+          <a href="tel:094446689" style="fontWeight:700">444 6689</a>
+          <a href="mailto:enquiries@highgrove.co.nz">enquiries@highgrove.co.nz</a>
+        </div>
+      </div>
+    </div>
+    <div style="background:#0D3958; color:rgba(255,255,255,0.8); fontSize:14px">
+      <div style="maxWidth:1280px; margin:0 auto; padding:16px 32px; display:flex; flexWrap:wrap; gap:8px 24px; justifyContent:space-between">
+        <span>© 2026 Ferry Enterprises Ltd</span>
+        <span>Member of the Retirement Villages Association of New Zealand</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { open: 0, q: 0, picked: [], sent: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280, menu: false, dd: null };
+  onResize = () => this.setState({ w: window.innerWidth, menu: window.innerWidth < 1240 ? this.state.menu : false });
+  quotes = [
+    { t: '“Thanks Patrick Ferry House, we’re so lucky to have picked you!”', n: 'Janet Templeman & Leonie Gallaher' },
+    { t: '“Thanks for the consideration and dedication you show towards my Dad. His profession was one of caring for people less fortunate, so it is nice to know he is now on the receiving end.”', n: 'Megan' },
+    { t: '“Thank you for the good care you have given Mike over the last week. I appreciate the attention you give him, which gives me the opportunity to recharge my batteries.”', n: 'Pat Scott' },
+    { t: '“Thank you for your warm and welcoming manner. The assistance and support you offered us was appreciated and first class.”', n: 'Lester Family' }
+  ];
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState(s => ({ q: (s.q + 1) % this.quotes.length })), 7000);
+    window.addEventListener('resize', this.onResize); this.onResize();
+  }
+  componentWillUnmount() { clearInterval(this.timer); window.removeEventListener('resize', this.onResize); }
+  renderVals() {
+    const q = this.quotes[this.state.q];
+    const hero = this.props.heroImage ?? 'Garden';
+    const labels = ['One bedroom apartment', 'Two bedroom apartment', 'Patrick Ferry House', 'Other'];
+    const narrow = this.state.w < 1240;
+    const dd = this.state.dd;
+    const setDD = k => () => this.setState({ dd: k });
+    const tog = k => () => this.setState(s => ({ dd: s.dd === k ? null : k }));
+    return {
+      wide: !narrow, narrow,
+      ddVillage: dd === 'Village', ddAbout: dd === 'About',
+      openVillage: setDD('Village'), openAbout: setDD('About'),
+      toggleVillage: tog('Village'), toggleAbout: tog('About'),
+      closeDD: () => this.setState({ dd: null }),
+      menuOpen: narrow && this.state.menu,
+      menuLabel: this.state.menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      closeMenu: () => this.setState({ menu: false }),
+      heroGarden: hero === 'Garden',
+      heroPool: hero === 'Pool',
+      showOffer: this.props.showOffer ?? true,
+      quoteText: q.t, quoteName: q.n,
+      sent: this.state.sent, notSent: !this.state.sent,
+      dots: this.quotes.map((_, i) => ({
+        go: () => { clearInterval(this.timer); this.setState({ q: i }); },
+        style: { width: i === this.state.q ? 26 : 9, height: 9, borderRadius: 999, border: 'none', padding: 0, cursor: 'pointer',
+          background: i === this.state.q ? '#0D3958' : '#D0DEBB', transition: 'all .3s ease' }
+      })),
+      interests: labels.map(label => {
+        const on = this.state.picked.includes(label);
+        return {
+          label,
+          toggle: () => this.setState(s => ({ picked: on ? s.picked.filter(x => x !== label) : s.picked.concat(label) })),
+          style: { padding: '11px 18px', borderRadius: 999, fontSize: 15, fontWeight: 700, cursor: 'pointer',
+            border: on ? '1.5px solid #0D3958' : '1.5px solid #DCD0C4', background: on ? '#0D3958' : '#FBF8F5',
+            color: on ? '#fff' : '#0D3958', transition: 'all .18s ease' }
+        };
+      }),
+      faqs: (this.faqs || []).map((f, i) => ({ q: f.q, a: f.a, pending: !f.a, isOpen: this.state.open === i,
+        toggle: () => this.setState(s => ({ open: s.open === i ? -1 : i })),
+        icon: this.state.open === i ? '−' : '+' })),
+      submit: () => this.setState({ sent: true })
+    };
+  }
+}
+</script>
+</body>
+</html>

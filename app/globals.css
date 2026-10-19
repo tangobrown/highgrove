@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* ── Design tokens (see docs/design/README.md) ─────────────────────────── */
+@theme {
+  --color-teal: #0d3958;
+  --color-teal-hover: #16507a;
+  --color-teal-deep: #0b2c39;
+  --color-green: #7bb729; /* accents only — never text on cream */
+  --color-green-text: #5e8f1c;
+  --color-green-soft: #d0debb;
+  --color-green-line: #c9d7b2;
+  --color-cream: #f7f1ec;
+  --color-body: #2e4b66;
+  --color-muted: #5b7389;
+  --color-rule: #e1d6cb;
+  --color-border: #e6dcd2;
+  --color-input-border: #dcd0c4;
+  --color-input-bg: #fbf8f5;
+
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-lato), system-ui, sans-serif;
+
+  --breakpoint-xs: 480px;
+  --breakpoint-nav: 1240px;
+
+  --shadow-float: 0 20px 50px rgba(13, 57, 88, 0.08);
+  --shadow-pop: 0 18px 40px rgba(13, 57, 88, 0.14);
+
+  --radius-arch: 9999px 9999px 0 0;
+}
+
+/* ── Layout ─────────────────────────────────────────────────────────────── */
+@utility container-site {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  @media (min-width: 640px) {
+    padding-inline: 32px;
+  }
+}
+
+/* Section vertical rhythm: 56 → 64 → 96px */
+@utility section-y {
+  padding-block: 56px;
+  @media (min-width: 640px) {
+    padding-block: 64px;
+  }
+  @media (min-width: 1024px) {
+    padding-block: 96px;
+  }
+}
+
+/* Auto-fit two-column split (stacks below ~900px) */
+@utility grid-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+}
+
+/* Auto-fit three-up cards */
+@utility grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+@utility rounded-arch {
+  border-radius: 9999px 9999px 0 0;
+}
+
+/* ── Typography ─────────────────────────────────────────────────────────── */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green-text);
+}
+
+@utility text-h1-home {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(56px, 7.4vw, 104px);
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+}
+
+@utility text-h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+@utility text-h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(36px, 4.2vw, 52px);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+@utility text-h2-cta {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 3.6vw, 46px);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+@utility text-h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+@utility text-lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--color-body);
+  text-wrap: pretty;
+}
+
+@utility text-copy {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--color-body);
+  text-wrap: pretty;
+}
+
+@utility text-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-teal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  [id] {
+    scroll-margin-top: 110px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-green);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
