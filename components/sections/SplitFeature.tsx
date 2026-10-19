@@ -28,7 +28,7 @@ export function SplitFeature({ id, tone = "white", reverse = false, image, eyebr
   const onTeal = tone === "teal";
   return (
     <Section id={id} tone={tone}>
-      <div className="grid-split items-center gap-10 lg:gap-16">
+      <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className={`mx-auto w-full ${shape === "card" ? "max-w-[600px]" : "max-w-[500px]"} ${reverse ? "lg:order-2" : ""}`}>
           <Photo
             src={image.src}

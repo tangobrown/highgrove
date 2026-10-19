@@ -117,7 +117,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-cream/94 backdrop-blur-[10px]">
       <div className="container-site flex items-center gap-x-8 py-4">
-        <Link href="/" className="flex min-w-0 shrink" aria-label="Highgrove — home">
+        <Link href="/" className="flex shrink-0" aria-label="Highgrove — home">
           <Image
             src="/images/logo-wide.png"
             alt="Highgrove Retirement Village & Patrick Ferry House"
@@ -203,7 +203,7 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <a href={bookHref} className={buttonClasses("primary", "md", "hidden shrink-0 sm:inline-flex")}>
+          <a href={bookHref} className={buttonClasses("primary", "md", "shrink-0 max-sm:hidden")}>
             Book a tour
           </a>
 
