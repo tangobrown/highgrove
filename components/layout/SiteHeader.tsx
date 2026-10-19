@@ -117,14 +117,14 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-cream/94 backdrop-blur-[10px]">
       <div className="container-site flex items-center gap-x-8 py-4">
-        <Link href="/" className="flex shrink-0" aria-label="Highgrove — home">
+        <Link href="/" className="flex min-w-0 shrink" aria-label="Highgrove — home">
           <Image
             src="/images/logo-wide.png"
             alt="Highgrove Retirement Village & Patrick Ferry House"
             width={259}
             height={48}
             priority
-            className="h-10 w-auto sm:h-12"
+            className="h-9 w-auto xs:h-10 sm:h-12"
           />
         </Link>
 
@@ -203,7 +203,7 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <a href={bookHref} className={buttonClasses("primary", "md", "hidden shrink-0 xs:inline-flex")}>
+          <a href={bookHref} className={buttonClasses("primary", "md", "hidden shrink-0 sm:inline-flex")}>
             Book a tour
           </a>
 
@@ -268,7 +268,7 @@ export function SiteHeader() {
               <a
                 href={bookHref}
                 onClick={() => setMobileMenuOpen(false)}
-                className={buttonClasses("primary", "md", "xs:hidden")}
+                className={buttonClasses("primary", "md", "sm:hidden")}
               >
                 Book a tour
               </a>

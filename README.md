@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Highgrove Retirement Village — website
 
-## Getting Started
-
-First, run the development server:
+Next.js 16 (App Router, TypeScript) + Tailwind CSS v4 rebuild of [highgrove.co.nz](https://www.highgrove.co.nz).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # http://localhost:3000
+npm run build && npm start
+npm run lint
+npm run import:posts # re-import blog posts from the old WordPress site
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path | What |
+|---|---|
+| `app/` | Routes. Each page sets its own `metadata`. `api/enquiry/route.ts` handles the enquiry form. |
+| `app/globals.css` | Design tokens (`@theme`) and shared utilities (`container-site`, `section-y`, `eyebrow`, `text-h1`, `text-h2`, …). |
+| `lib/site.ts` | Contact details, navigation, bed count and the **`campaign.showOffer`** toggle for the $99 panel. |
+| `components/layout` | Utility bar, sticky header (dropdowns + mobile menu below 1240px), footer. |
+| `components/sections` | Reusable page sections: `InnerHero`, `SplitFeature`, `CardGrid`, `Gallery`, `NavyCta`, `Testimonials`, `EnquirySection`. |
+| `components/ui` | `ButtonLink`, `TextLink`, `Eyebrow`, `BulletList`, `OrnamentRule`, `Photo`. |
+| `content/` | Testimonials, FAQs, team, and blog posts (`content/posts/*.md`). |
+| `public/images/` | Photography (blog images in `public/images/blog/<slug>/`). |
+| `docs/design/` | The original design handoff (spec + HTML references). |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Blog
 
-## Learn More
+Posts are Markdown files with YAML frontmatter in `content/posts/`. Add a post by creating a new `.md` file:
 
-To learn more about Next.js, take a look at the following resources:
+```md
+---
+title: "Spring in the village"
+slug: spring-in-the-village
+date: 2026-10-01T09:00:00.000Z
+category: Village life      # Village life | Events | Health & care | News
+excerpt: "One or two sentences for cards and search results."
+heroImage: /images/blog/spring-in-the-village/hero.jpg
+heroAlt: "Residents in the vegetable garden"
+author:
+  name: Highgrove team
+  role: Highgrove Village
+  avatar: /images/logo-icon.png
+featured: false
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Body in Markdown…
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The existing posts were imported from the WordPress REST API with `npm run import:posts`. Re-running it is safe, but it overwrites imported files, so stop using it once posts are edited here.
 
-## Deploy on Vercel
+## Enquiries
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`/api/enquiry` validates input (with a honeypot field for spam) and currently only **logs** enquiries on the server. Hook up email or CRM delivery in `app/api/enquiry/route.ts` once the destination is decided.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Open items for the client
+
+See `docs/design/README.md` → "Open items": high-res photography and SVG logos, $99 offer T&Cs and end date, enquiry destination, and the bed count (77 vs 74).
