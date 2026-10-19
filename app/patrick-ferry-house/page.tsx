@@ -43,14 +43,14 @@ const careCards: NumberedCard[] = [
 ];
 
 const gallery: GalleryItem[] = [
-  { src: "/images/pfh-building.png", alt: "Balconies overlooking the grounds" },
-  { src: "/images/pfh-room.png", alt: "Private rooms" },
-  { src: "/images/pfh-nurse.png", alt: "Caring, attentive staff" },
-  { src: "/images/pfh-window.png", alt: "Light-filled spaces" },
-  { src: "/images/pfh-corridor.png", alt: "A short walk from the village" },
-  { src: "/images/pfh-reception.png", alt: "Friendly reception" },
-  { src: "/images/pfh-menu.png", alt: "Fresh daily menus" },
-  { src: "/images/pfh-dining.png", alt: "Communal dining" },
+  { src: "/images/pfh-building.jpg", alt: "Balconies overlooking the grounds" },
+  { src: "/images/pfh-room.jpg", alt: "Private rooms" },
+  { src: "/images/pfh-nurse.jpg", alt: "Caring, attentive staff" },
+  { src: "/images/pfh-window.jpg", alt: "Light-filled spaces" },
+  { src: "/images/pfh-corridor.jpg", alt: "A short walk from the village" },
+  { src: "/images/pfh-reception.jpg", alt: "Friendly reception" },
+  { src: "/images/pfh-menu.jpg", alt: "Fresh daily menus" },
+  { src: "/images/pfh-dining.jpg", alt: "Communal dining" },
 ];
 
 export default function PatrickFerryHousePage() {
@@ -61,7 +61,7 @@ export default function PatrickFerryHousePage() {
         eyebrow="Patrick Ferry House · On-site hospital"
         title="All the care you need."
         intro="Day, respite, rehabilitation and recovery, full rest home and palliative care — right alongside Highgrove, a short internal walk from the apartments."
-        image={{ src: "/images/photo-pfh-care.png", alt: "A carer walking with a resident", position: "50% 25%" }}
+        image={{ src: "/images/photo-pfh-care.jpg", alt: "A carer walking with a resident", position: "50% 25%" }}
         anchors={[
           { label: "Services", href: "#services" },
           { label: "Our care", href: "#care" },

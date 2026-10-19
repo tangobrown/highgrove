@@ -48,7 +48,7 @@ export default function AssistedLivingPage() {
         eyebrow="Assisted living options"
         title="As your needs change, keep your independence."
         intro="Whether you need a hand or just want a little luxury, our meal, linen and cleaning services free you up to do the things you would rather be doing."
-        image={{ src: "/images/fac-cards.png", alt: "Residents enjoying a game of cards together", position: "45% 50%" }}
+        image={{ src: "/images/fac-cards.jpg", alt: "Residents enjoying a game of cards together", position: "45% 50%" }}
         crumbs={[{ label: "Home", href: "/" }, { label: "Highgrove Village" }, { label: "Assisted living" }]}
         anchors={[
           { label: "Our services", href: "#services" },

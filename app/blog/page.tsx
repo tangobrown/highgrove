@@ -85,7 +85,7 @@ export default function BlogPage({ searchParams }: { searchParams: SearchParams 
         eyebrow="Highgrove blog"
         title="News from the village."
         intro="Stories, events and updates from the Highgrove and Patrick Ferry House family."
-        image={{ src: "/images/loc-gardener.png", alt: "A resident with fresh produce from the village gardens" }}
+        image={{ src: "/images/loc-gardener.jpg", alt: "A resident with fresh produce from the village gardens" }}
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "Blog" }]}
         bar={
           <Suspense fallback={<CategoryFilter />}>

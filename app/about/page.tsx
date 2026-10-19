@@ -45,7 +45,7 @@ export default function AboutPage() {
         eyebrow="About Highgrove"
         title="Family first, always."
         intro="Highgrove Retirement Village and Patrick Ferry Hospital are the brainchild of the late Patrick Ferry and his wife Gerrie. Highgrove is a family affair, where the driving ethos is family first."
-        image={{ src: "/images/about-group.png", alt: "A group of Highgrove residents laughing together", position: "50% 40%" }}
+        image={{ src: "/images/about-group.jpg", alt: "A group of Highgrove residents laughing together", position: "50% 40%" }}
         anchors={[
           { label: "Our village", href: "#village" },
           { label: "Our history", href: "#history" },
@@ -88,7 +88,7 @@ export default function AboutPage() {
       <SplitFeature
         id="concept"
         tone="teal"
-        image={{ src: "/images/fac-cards.png", alt: "Residents chatting over cards and tea" }}
+        image={{ src: "/images/fac-cards.jpg", alt: "Residents chatting over cards and tea" }}
         eyebrow="The concept"
         title="First-class facilities, personal care, an enviable lifestyle."
         body={[

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const facilityPhotos = [
-  { src: "/images/photo-pool.png", alt: "The heated indoor pool", caption: "Heated indoor pool" },
+  { src: "/images/photo-pool.jpg", alt: "The heated indoor pool", caption: "Heated indoor pool" },
   {
     src: "/images/garden-hero.jpg",
     alt: "Residents with produce from the village gardens",
@@ -99,7 +99,7 @@ export default function IndependentLivingPage() {
         id="hospital"
         tone="teal"
         image={{
-          src: "/images/photo-pfh-care.png",
+          src: "/images/photo-pfh-care.jpg",
           alt: "A carer at Patrick Ferry House walking with a resident",
           position: "50% 20%",
         }}

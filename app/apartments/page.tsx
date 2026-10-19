@@ -19,7 +19,7 @@ export default function ApartmentsPage() {
         eyebrow="Retirement village apartments"
         title="Designed for living."
         intro="No one wants to feel they’re living in a motel unit. Highgrove’s apartments, designed with renowned British architect Terence Kennedy, offer a standard of living you’d be hard pressed to find elsewhere."
-        image={{ src: "/images/apt-living.png", alt: "A resident relaxing in his apartment living room", position: "60% 50%" }}
+        image={{ src: "/images/apt-living.jpg", alt: "A resident relaxing in his apartment living room", position: "60% 50%" }}
         crumbs={[{ label: "Home", href: "/" }, { label: "Highgrove Village" }, { label: "Apartments" }]}
         anchors={[
           { label: "Living areas", href: "#living" },
@@ -46,7 +46,7 @@ export default function ApartmentsPage() {
         id="kitchen"
         tone="cream"
         reverse
-        image={{ src: "/images/apt-kitchen.png", alt: "A full apartment kitchen" }}
+        image={{ src: "/images/apt-kitchen.jpg", alt: "A full apartment kitchen" }}
         eyebrow="Kitchen"
         title="A full-functioning kitchen"
         body={[
@@ -58,7 +58,7 @@ export default function ApartmentsPage() {
       <SplitFeature
         id="bedrooms"
         tone="white"
-        image={{ src: "/images/apt-bedroom.png", alt: "A master bedroom with mirrored wardrobe" }}
+        image={{ src: "/images/apt-bedroom.jpg", alt: "A master bedroom with mirrored wardrobe" }}
         eyebrow="Bedrooms"
         title="For a good night’s rest"
         body={[
@@ -71,7 +71,7 @@ export default function ApartmentsPage() {
         id="bathroom"
         tone="cream"
         reverse
-        image={{ src: "/images/apt-bathroom.png", alt: "An accessible apartment bathroom" }}
+        image={{ src: "/images/apt-bathroom.jpg", alt: "An accessible apartment bathroom" }}
         eyebrow="Bathroom & laundry"
         title="A little luxury, built for independence"
         body={[

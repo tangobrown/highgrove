@@ -15,14 +15,14 @@ export const metadata: Metadata = {
 };
 
 const gallery: GalleryItem[] = [
-  { src: "/images/fac-garden.png", alt: "A resident tending the vegetable gardens", caption: "Vegetable gardens" },
-  { src: "/images/fac-poolroom.png", alt: "Heated indoor pool" },
-  { src: "/images/fac-gym.png", alt: "Fitness centre" },
-  { src: "/images/fac-library.png", alt: "Library" },
-  { src: "/images/fac-petanque.png", alt: "Petanque" },
-  { src: "/images/fac-billiards.png", alt: "Pool table & darts" },
-  { src: "/images/fac-boardwalk.png", alt: "Boardwalk" },
-  { src: "/images/fac-chess.png", alt: "Outdoor chess" },
+  { src: "/images/fac-garden.jpg", alt: "A resident tending the vegetable gardens", caption: "Vegetable gardens" },
+  { src: "/images/fac-poolroom.jpg", alt: "Heated indoor pool" },
+  { src: "/images/fac-gym.jpg", alt: "Fitness centre" },
+  { src: "/images/fac-library.jpg", alt: "Library" },
+  { src: "/images/fac-petanque.jpg", alt: "Petanque" },
+  { src: "/images/fac-billiards.jpg", alt: "Pool table & darts" },
+  { src: "/images/fac-boardwalk.jpg", alt: "Boardwalk" },
+  { src: "/images/fac-chess.jpg", alt: "Outdoor chess" },
 ];
 
 export default function FacilitiesPage() {
@@ -45,7 +45,7 @@ export default function FacilitiesPage() {
       <SplitFeature
         id="keep-fit"
         tone="white"
-        image={{ src: "/images/photo-pool.png", alt: "The heated indoor pool" }}
+        image={{ src: "/images/photo-pool.jpg", alt: "The heated indoor pool" }}
         eyebrow="Keep fit, physically & mentally"
         title="Something for every fitness level, every season"
         body={[
@@ -58,7 +58,7 @@ export default function FacilitiesPage() {
         id="socialise"
         tone="cream"
         reverse
-        image={{ src: "/images/fac-cards.png", alt: "Residents playing cards in the lounge" }}
+        image={{ src: "/images/fac-cards.jpg", alt: "Residents playing cards in the lounge" }}
         eyebrow="Socialise & have fun"
         title="Good company is easy to find"
         body={[

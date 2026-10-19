@@ -20,7 +20,7 @@ const options = [
   },
   {
     href: "/patrick-ferry-house",
-    image: { src: "/images/photo-pfh-care.png", alt: "A carer walking with a resident", position: "50% 30%" },
+    image: { src: "/images/photo-pfh-care.jpg", alt: "A carer walking with a resident", position: "50% 30%" },
     eyebrow: "Stay close as needs change",
     title: "Patrick Ferry House",
     body: "Continued care right alongside the village, in surroundings as familiar and friendly as Highgrove itself.",

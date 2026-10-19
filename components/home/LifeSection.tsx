@@ -3,13 +3,13 @@ import { Photo } from "@/components/ui/Photo";
 const circles = [
   { src: "/images/circle-boardwalk.png", alt: "Residents on a local boardwalk" },
   { src: "/images/circle-entrance.png", alt: "Village entrance and gardens" },
-  { src: "/images/circle-couple.png", alt: "Residents laughing together" },
+  { src: "/images/circle-couple.jpg", alt: "Residents laughing together" },
   { src: "/images/circle-interior.png", alt: "A bright apartment lounge" },
-  { src: "/images/circle-friends.png", alt: "Friends chatting over tea" },
+  { src: "/images/circle-friends.jpg", alt: "Friends chatting over tea" },
 ];
 
 const tiles = [
-  { src: "/images/photo-pool.png", alt: "Heated indoor pool", caption: "Heated indoor pool" },
+  { src: "/images/photo-pool.jpg", alt: "Heated indoor pool", caption: "Heated indoor pool" },
   { src: "/images/photo-lounge.png", alt: "Open-plan living", caption: "Light-filled, open-plan living" },
   { src: "/images/photo-kitchen.png", alt: "Modern apartment kitchen", caption: "Modern, easy-care kitchens" },
 ];

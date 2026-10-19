@@ -11,7 +11,7 @@ export const team: TeamMember[] = [
   {
     name: "Geraldine Ferry",
     role: "Director",
-    image: "/images/team-geraldine.png",
+    image: "/images/team-geraldine.jpg",
     alt: "Geraldine Ferry",
     bio: [
       "Co-founder, owner and matriarch. Born in Singapore and a former UK registered nurse, Gerrie came to New Zealand with her Scottish husband Patrick and family in 1994.",
@@ -21,7 +21,7 @@ export const team: TeamMember[] = [
   {
     name: "Khim Fletcher (nee Ferry)",
     role: "Managing Director",
-    image: "/images/team-khim.png",
+    image: "/images/team-khim.jpg",
     alt: "Khim Fletcher (nee Ferry)",
     bio: [
       "Born in London and raised in France, Khim was groomed for her role from high school, working every holiday from receptionist to cleaning, cooking and onsite management.",
@@ -31,7 +31,7 @@ export const team: TeamMember[] = [
   {
     name: "Patrick Ferry",
     role: "Operations Manager",
-    image: "/images/team-patrick.png",
+    image: "/images/team-patrick.jpg",
     alt: "Patrick Ferry",
     bio: [
       "Patrick was introduced to the family business early — from “assisting” the builders on site as a teenager to working as a labourer through university. He’s still known to cover for the maintenance team.",
@@ -41,7 +41,7 @@ export const team: TeamMember[] = [
   {
     name: "Linda McFadyen",
     role: "General Manager",
-    image: "/images/team-linda.png",
+    image: "/images/team-linda.jpg",
     alt: "Linda McFadyen",
     bio: [
       "A long-serving member of the team, Linda started as a part-time office assistant in 2006 and worked her way up to General Manager and Director. A former software developer, she keeps everything ticking along smoothly.",
@@ -51,7 +51,7 @@ export const team: TeamMember[] = [
   {
     name: "Andrew Fletcher",
     role: "Legal Counsel / Contracts & Compliance",
-    image: "/images/team-andrew.png",
+    image: "/images/team-andrew.jpg",
     alt: "Andrew Fletcher",
     bio: [
       "Andrew holds degrees in Law and Science (Ecology) from the University of Otago, and was a solicitor with Auckland firms Simpson Grierson and Sanderson Weir before joining the family business in 2011.",

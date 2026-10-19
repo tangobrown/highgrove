@@ -31,7 +31,7 @@ export default function FaqsPage() {
         eyebrow="Frequently asked questions"
         title="Your questions, answered."
         intro="A selection of the questions families ask us most. If yours isn’t here, we’re always happy to talk it through."
-        image={{ src: "/images/circle-couple.png", alt: "Residents laughing together" }}
+        image={{ src: "/images/circle-couple.jpg", alt: "Residents laughing together" }}
         crumbs={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "FAQs" }]}
         anchors={[
           { label: "All questions", href: "#questions" },

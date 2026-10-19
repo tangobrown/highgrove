@@ -11,7 +11,7 @@ export function CareSection() {
       <div className="container-site grid-split items-center gap-12 py-14 sm:py-16 lg:gap-16 lg:py-[104px]">
         <div className="mx-auto w-full max-w-[500px]">
           <Photo
-            src="/images/photo-pfh-care.png"
+            src="/images/photo-pfh-care.jpg"
             alt="A carer at Patrick Ferry House walking with a resident"
             shape="arch"
             aspect={0.92}

@@ -23,7 +23,7 @@ export default function OurTeamPage() {
         eyebrow="The Highgrove family"
         title="Friendly, approachable, caring."
         intro="Qualities our team have in abundance. Experts in their respective fields, our people see Highgrove as their second home."
-        image={{ src: "/images/about-group.png", alt: "Highgrove residents together", position: "50% 40%" }}
+        image={{ src: "/images/about-group.jpg", alt: "Highgrove residents together", position: "50% 40%" }}
         anchors={[
           { label: "Meet the team", href: "#team" },
           { label: `Call ${site.phone.display}`, href: site.phone.href },

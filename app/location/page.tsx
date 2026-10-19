@@ -76,7 +76,7 @@ export default function LocationPage() {
       <SplitFeature
         id="shopping"
         tone="cream"
-        image={{ src: "/images/loc-basket.png", alt: "A basket of fresh produce" }}
+        image={{ src: "/images/loc-basket.jpg", alt: "A basket of fresh produce" }}
         eyebrow="Shopping"
         title="Everything within a 10 minute drive"
         body={[
@@ -89,7 +89,7 @@ export default function LocationPage() {
         id="clubs"
         tone="white"
         reverse
-        image={{ src: "/images/loc-petanque.png", alt: "Petanque boules on gravel" }}
+        image={{ src: "/images/loc-petanque.jpg", alt: "Petanque boules on gravel" }}
         eyebrow="Clubs & recreation"
         title="Golf, bowls, tennis — you name it"
         body={[
@@ -100,7 +100,7 @@ export default function LocationPage() {
       <SplitFeature
         id="parks"
         tone="cream"
-        image={{ src: "/images/loc-walking.png", alt: "Residents out walking together", shape: "circle" }}
+        image={{ src: "/images/loc-walking.jpg", alt: "Residents out walking together", shape: "circle" }}
         eyebrow="Parks & reserves"
         title="Some of the region’s best-kept secrets"
         body={[

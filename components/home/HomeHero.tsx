@@ -38,7 +38,7 @@ export function HomeHero() {
           />
           <div className="absolute right-3 bottom-4 left-3 flex max-w-[300px] items-center gap-3.5 rounded-[18px] bg-white px-[22px] py-[18px] shadow-pop sm:right-auto sm:bottom-[34px] sm:left-4 lg:-left-7">
             <Image
-              src="/images/circle-friends.png"
+              src="/images/circle-friends.jpg"
               alt=""
               width={52}
               height={52}
