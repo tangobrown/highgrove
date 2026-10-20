@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  const image = post.heroImage ?? "/images/garden-produce-couple.jpg";
+  const image = post.heroImage ?? "/images/grounds-apartments-lawn.jpg";
   return {
     title: post.title,
     description: post.excerpt,

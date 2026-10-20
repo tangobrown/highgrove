@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_NZ",
     siteName: site.name,
-    images: [{ url: "/images/garden-produce-couple.jpg", width: 2400, height: 1683 }],
+    images: [{ url: "/images/grounds-apartments-lawn.jpg", width: 2400, height: 1597 }],
   },
   icons: { icon: "/images/logo-icon.png" },
 };
@@ -48,7 +48,7 @@ const jsonLd = {
   url: site.url,
   telephone: site.phone.intl,
   email: site.email,
-  image: `${site.url}/images/garden-produce-couple.jpg`,
+  image: `${site.url}/images/grounds-apartments-lawn.jpg`,
   logo: `${site.url}/images/logo-wide.png`,
   address: {
     "@type": "PostalAddress",

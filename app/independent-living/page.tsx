@@ -20,10 +20,10 @@ export const metadata: Metadata = {
 const facilityPhotos = [
   { src: "/images/photo-pool.jpg", alt: "The heated indoor pool", caption: "Heated indoor pool" },
   {
-    src: "/images/garden-produce-couple.jpg",
-    alt: "Residents with produce from the village gardens",
+    src: "/images/grounds-apartments-lawn-portrait.jpg",
+    alt: "Apartments with balconies overlooking a sunny lawn and gardens",
     caption: "Grounds & gardens",
-    position: "70% 40%",
+    position: "40% 50%",
   },
 ];
 
