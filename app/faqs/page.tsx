@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { FaqAccordion } from "@/components/faqs/FaqAccordion";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -7,12 +8,13 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { faqAnswerText, faqs } from "@/content/faqs";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "FAQs",
+export const metadata: Metadata = pageMeta({
+  title: "Retirement Village FAQs | Highgrove, Albany",
   description:
-    "Answers to the questions families ask most about Highgrove Retirement Village in Albany: ownership, buying an apartment, Occupation Right Agreements, weekly fees, care, pets and more.",
-  alternates: { canonical: "/faqs" },
-};
+    "Common questions about Highgrove Retirement Village in Albany: buying an apartment, Occupation Right Agreements, weekly fees, care options, pets and more.",
+  path: "/faqs",
+  image: { src: "/images/circle-couple.jpg", alt: "Residents laughing together" },
+});
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -28,7 +30,8 @@ export default function FaqsPage() {
   return (
     <>
       <InnerHero
-        eyebrow="Frequently asked questions"
+        path="/faqs"
+        eyebrow="Retirement village FAQs"
         title="Your questions, answered."
         intro="A selection of the questions families ask us most. If yours isn’t here, we’re always happy to talk it through."
         image={{ src: "/images/circle-couple.jpg", alt: "Residents laughing together" }}

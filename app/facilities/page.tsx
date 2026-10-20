@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { Gallery, type GalleryItem } from "@/components/sections/Gallery";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -7,12 +8,13 @@ import { SplitFeature } from "@/components/sections/SplitFeature";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SectionHeading } from "@/components/ui/Typography";
 
-export const metadata: Metadata = {
-  title: "Facilities",
+export const metadata: Metadata = pageMeta({
+  title: "Retirement Village Facilities Albany | Highgrove",
   description:
-    "A heated indoor pool, fitness centre, library, petanque, gardens, boardwalk and a club lounge — Highgrove’s village facilities in Albany are right on your doorstep.",
-  alternates: { canonical: "/facilities" },
-};
+    "Heated indoor pool, fitness centre, library, pétanque, gardens and a boardwalk: Highgrove's retirement village facilities in Albany are on your doorstep.",
+  path: "/facilities",
+  image: { src: "/images/photo-pool-friends.png", alt: "Two friends in the heated indoor pool" },
+});
 
 const gallery: GalleryItem[] = [
   { src: "/images/fac-garden.jpg", alt: "A resident tending the vegetable gardens", caption: "Vegetable gardens" },
@@ -39,7 +41,8 @@ export default function FacilitiesPage() {
   return (
     <>
       <InnerHero
-        eyebrow="Village facilities"
+        path="/facilities"
+        eyebrow="Retirement village facilities · Albany"
         title="Put your feet up, or get active."
         intro="Whether it’s time to slow down a little or get moving, Highgrove offers a surprising range of facilities, right on your doorstep."
         image={{ src: "/images/photo-pool-friends.png", alt: "Two friends in the heated indoor pool" }}

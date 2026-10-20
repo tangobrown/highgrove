@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { CardGrid, type NumberedCard } from "@/components/sections/CardGrid";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -8,12 +9,13 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Photo } from "@/components/ui/Photo";
 import { SectionHeading } from "@/components/ui/Typography";
 
-export const metadata: Metadata = {
-  title: "Assisted Living",
+export const metadata: Metadata = pageMeta({
+  title: "Assisted Living & Care Services Albany | Highgrove",
   description:
-    "Meals, personal care, linen, cleaning and maintenance services at Highgrove in Albany — the help you need as your needs change, while you keep your independence.",
-  alternates: { canonical: "/assisted-living" },
-};
+    "Assisted living at Highgrove in Albany: meals, personal care, linen, cleaning and maintenance, with rest home and hospital care on site if needs change.",
+  path: "/assisted-living",
+  image: { src: "/images/fac-cards.jpg", alt: "Residents enjoying a game of cards together" },
+});
 
 const services: NumberedCard[] = [
   {
@@ -46,7 +48,8 @@ export default function AssistedLivingPage() {
   return (
     <>
       <InnerHero
-        eyebrow="Assisted living options"
+        path="/assisted-living"
+        eyebrow="Assisted living · Albany"
         title="As your needs change, keep your independence."
         intro="Whether you need a hand or just want a little luxury, our meal, linen and cleaning services free you up to do the things you would rather be doing."
         image={{ src: "/images/fac-cards.jpg", alt: "Residents enjoying a game of cards together", position: "45% 50%" }}

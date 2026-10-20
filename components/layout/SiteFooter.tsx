@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { footerLinks, site } from "@/lib/site";
+import { footerGroups, site } from "@/lib/site";
 
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-white">
-      <div className="container-site grid grid-cols-[repeat(auto-fit,minmax(min(100%,240px),1fr))] gap-10 pt-16 pb-12">
+      <div className="container-site grid gap-10 pt-16 pb-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.3fr]">
         <div className="min-w-0">
           <Image
             src="/images/logo-wide.png"
@@ -15,21 +15,24 @@ export function SiteFooter() {
             className="h-14 w-auto max-w-full"
           />
           <p className="mt-[22px] max-w-[38ch] text-base leading-relaxed text-body">
-            A family owned and operated boutique retirement village in Albany, alongside Patrick Ferry House hospital.
+            A family owned and operated boutique retirement village in Albany, Auckland, alongside Patrick Ferry House
+            rest home and hospital.
           </p>
         </div>
-        <nav aria-label="Footer">
-          <h2 className="mb-4 text-sm font-black tracking-[0.12em] uppercase">Explore</h2>
-          <ul className="grid gap-2.5 text-base">
-            {footerLinks.map((l) => (
-              <li key={l.href}>
-                <Link href={l.href} className="hover:text-green-text">
-                  {l.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {footerGroups.map((group) => (
+          <nav key={group.heading} aria-label={group.heading}>
+            <h2 className="mb-4 text-sm font-black tracking-[0.12em] uppercase">{group.heading}</h2>
+            <ul className="grid gap-2.5 text-base">
+              {group.links.map((l) => (
+                <li key={l.label}>
+                  <Link href={l.href} className="hover:text-green-text">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))}
         <div>
           <h2 className="mb-4 text-sm font-black tracking-[0.12em] uppercase">Visit</h2>
           <address className="grid gap-2.5 text-base leading-normal text-body not-italic">

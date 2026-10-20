@@ -3,6 +3,7 @@ import { Lato, Playfair_Display } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { UtilityBar } from "@/components/layout/UtilityBar";
+import { jsonLd, siteGraph } from "@/lib/schema";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -24,8 +25,8 @@ const lato = Lato({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Highgrove Retirement Village, Albany | Feels like family",
-    template: "%s | Highgrove Retirement Village, Albany",
+    default: "Retirement Village Albany, Auckland | Highgrove",
+    template: "%s | Highgrove",
   },
   description: site.description,
   openGraph: {
@@ -34,31 +35,21 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: [{ url: "/images/grounds-apartments-lawn.jpg", width: 2400, height: 1597 }],
   },
-  icons: { icon: "/images/logo-icon.png" },
+  twitter: { card: "summary_large_image" },
+  formatDetection: { telephone: true, address: true, email: true },
+  other: {
+    "geo.region": "NZ-AUK",
+    "geo.placename": "Albany, Auckland",
+    "geo.position": `${site.geo.lat};${site.geo.lng}`,
+    ICBM: `${site.geo.lat}, ${site.geo.lng}`,
+  },
+  icons: { icon: "/images/logo-icon.png", apple: "/images/logo-icon.png" },
 };
 
 export const viewport: Viewport = {
   themeColor: "#F7F1EC",
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": ["SeniorLivingCommunity", "LocalBusiness"],
-  name: site.name,
-  url: site.url,
-  telephone: site.phone.intl,
-  email: site.email,
-  image: `${site.url}/images/grounds-apartments-lawn.jpg`,
-  logo: `${site.url}/images/logo-wide.png`,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.address.street,
-    addressLocality: `${site.address.suburb}, ${site.address.city}`,
-    addressRegion: site.address.region,
-    postalCode: site.address.postcode,
-    addressCountry: site.address.country,
-  },
-};
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -76,7 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteFooter />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={jsonLd(siteGraph())}
         />
       </body>
     </html>

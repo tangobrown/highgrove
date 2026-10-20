@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { CardGrid, type NumberedCard } from "@/components/sections/CardGrid";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { Gallery, type GalleryItem } from "@/components/sections/Gallery";
@@ -7,13 +8,16 @@ import { Section } from "@/components/sections/Section";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TextLink } from "@/components/ui/TextLink";
 import { Eyebrow, SectionHeading } from "@/components/ui/Typography";
+import { jsonLd, nursingHomeSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Patrick Ferry House",
-  description: `Patrick Ferry House is Highgrove’s ${site.bedCount}-bed on-site hospital in Albany, offering day, respite, rehabilitation and recovery, full rest home and palliative care — a short internal walk from the apartments.`,
-  alternates: { canonical: "/patrick-ferry-house" },
-};
+export const metadata: Metadata = pageMeta({
+  title: "Rest Home & Hospital Care Albany | Patrick Ferry House",
+  description:
+    `Patrick Ferry House is a ${site.bedCount}-bed rest home and hospital in Albany offering hospital-level, respite, palliative and rehabilitation care beside Highgrove.`,
+  path: "/patrick-ferry-house",
+  image: { src: "/images/photo-pfh-care.jpg", alt: "A carer walking with a resident" },
+});
 
 const services = [
   "24/7 Registered Nurse & emergency call button",
@@ -29,8 +33,20 @@ const services = [
 
 const careCards: NumberedCard[] = [
   {
-    title: "Aged care",
-    body: "We offer day, respite, rehabilitation and recovery, full rest home and palliative care. Our Registered Nurses and Healthcare Assistants support residents while encouraging dignity and independence.",
+    title: "Rest home & hospital care",
+    body: "Full rest home and hospital-level care, around the clock. Our Registered Nurses and Healthcare Assistants support residents while encouraging dignity and independence.",
+  },
+  {
+    title: "Respite & day care",
+    body: "Short-term respite stays and day care give family carers a well-earned break, with the same attentive care and comfortable rooms our permanent residents enjoy.",
+  },
+  {
+    title: "Palliative care",
+    body: "Gentle, compassionate palliative care in a homely setting, so families can stay close to the people they love.",
+  },
+  {
+    title: "Rehabilitation & recovery",
+    body: "Support to regain strength and confidence after illness, surgery or a hospital stay, with our visiting doctor and physiotherapist.",
   },
   {
     title: "Feel at home",
@@ -56,9 +72,11 @@ const gallery: GalleryItem[] = [
 export default function PatrickFerryHousePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(nursingHomeSchema)} />
       <InnerHero
+        path="/patrick-ferry-house"
         crumbs={[{ label: "Home", href: "/" }, { label: "Patrick Ferry House" }]}
-        eyebrow="Patrick Ferry House · On-site hospital"
+        eyebrow="Patrick Ferry House · Rest home & hospital care"
         title="All the care you need."
         intro="Day, respite, rehabilitation and recovery, full rest home and palliative care — right alongside Highgrove, a short internal walk from the apartments."
         image={{ src: "/images/photo-pfh-care.jpg", alt: "A carer walking with a resident", position: "50% 25%" }}
@@ -103,7 +121,12 @@ export default function PatrickFerryHousePage() {
       </Section>
 
       <Section id="care" tone="cream">
-        <SectionHeading eyebrow="Our care" title="Comfortable, familiar, and close to home" className="mb-12" />
+        <SectionHeading
+          eyebrow="Our care"
+          title="Comfortable, familiar, and close to home"
+          intro="Rest home, hospital, respite and palliative care in Albany, right alongside Highgrove village."
+          className="mb-12"
+        />
         <CardGrid cards={careCards} />
       </Section>
 

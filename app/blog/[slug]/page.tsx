@@ -10,6 +10,8 @@ import { Breadcrumbs } from "@/components/sections/InnerHero";
 import { NavyCta } from "@/components/sections/NavyCta";
 import { TextLink } from "@/components/ui/TextLink";
 import { bodyWithoutLead, getAllPosts, getPost, getRelatedPosts, type Author } from "@/lib/posts";
+import { breadcrumbSchema, jsonLd } from "@/lib/schema";
+import { absoluteUrl, clipDescription, pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { Arrow } from "@/components/ui/Arrow";
 
@@ -23,23 +25,17 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
-  const image = post.heroImage ?? "/images/grounds-apartments-lawn.jpg";
+  const base = pageMeta({
+    title: `${post.title} | Highgrove`,
+    description: clipDescription(post.excerpt),
+    path: `/blog/${post.slug}`,
+    image: post.heroImage ? { src: post.heroImage, alt: post.heroAlt ?? post.title } : undefined,
+    type: "article",
+  });
   return {
-    title: post.title,
-    description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
+    ...base,
     authors: [{ name: post.author.name }],
-    openGraph: {
-      type: "article",
-      title: post.title,
-      description: post.excerpt,
-      url: `/blog/${post.slug}`,
-      publishedTime: post.date,
-      authors: [post.author.name],
-      section: post.category,
-      images: [{ url: image, alt: post.heroImage ? post.heroAlt : site.name }],
-    },
-    twitter: { card: "summary_large_image", title: post.title, description: post.excerpt, images: [image] },
+    openGraph: { ...base.openGraph, type: "article", publishedTime: post.date, authors: [post.author.name], section: post.category },
   };
 }
 
@@ -67,15 +63,22 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   const related = getRelatedPosts(post.slug, 3);
   const url = `${site.url}/blog/${post.slug}`;
-  const jsonLd = {
+  const crumbs = [{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }, { label: post.title }];
+  const postSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.excerpt,
+    description: clipDescription(post.excerpt),
     datePublished: post.date,
-    image: post.heroImage ? `${site.url}${post.heroImage}` : undefined,
-    author: { "@type": "Organization", name: post.author.name === "Highgrove team" ? site.name : post.author.name },
-    publisher: { "@type": "Organization", name: site.name, logo: `${site.url}/images/logo-icon.png` },
+    dateModified: post.date,
+    inLanguage: "en-NZ",
+    articleSection: post.category,
+    image: absoluteUrl(post.heroImage ?? "/images/grounds-apartments-lawn.jpg"),
+    author:
+      post.author.name === "Highgrove team"
+        ? { "@id": absoluteUrl("/#organization") }
+        : { "@type": "Person", name: post.author.name },
+    publisher: { "@id": absoluteUrl("/#organization") },
     mainEntityOfPage: url,
   };
 
@@ -84,7 +87,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
       <article>
         <header className="container-site pt-9">
           <Breadcrumbs
-            crumbs={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }, { label: post.title }]}
+            crumbs={crumbs}
             className="mb-7"
           />
           <div className="mx-auto max-w-[860px] pt-2 pb-10 text-center sm:pt-6 sm:pb-12">
@@ -157,7 +160,8 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         cta={{ label: "Book a tour today", href: "#enquire" }}
       />
       <EnquirySection />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(postSchema)} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema(crumbs, `/blog/${post.slug}`))} />
     </>
   );
 }

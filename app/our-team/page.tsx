@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -8,19 +9,21 @@ import { SectionHeading } from "@/components/ui/Typography";
 import { team } from "@/content/team";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Our Team",
+export const metadata: Metadata = pageMeta({
+  title: "Our Team | Highgrove Retirement Village, Albany",
   description:
-    "Meet the Ferry family and the team behind Highgrove Retirement Village in Albany — friendly, approachable and caring people who see Highgrove as their second home.",
-  alternates: { canonical: "/our-team" },
-};
+    "Meet the Ferry family and the friendly, caring team behind Highgrove Retirement Village and Patrick Ferry House in Albany, Auckland.",
+  path: "/our-team",
+  image: { src: "/images/about-group.jpg", alt: "Highgrove residents together" },
+});
 
 export default function OurTeamPage() {
   return (
     <>
       <InnerHero
+        path="/our-team"
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "Our team" }]}
-        eyebrow="The Highgrove family"
+        eyebrow="Our team · The Highgrove family"
         title="Friendly, approachable, caring."
         intro="Qualities our team have in abundance. Experts in their respective fields, our people see Highgrove as their second home."
         image={{ src: "/images/about-group.jpg", alt: "Highgrove residents together", position: "50% 40%" }}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import type { ReactNode } from "react";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -9,11 +10,13 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Typography";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Location & Contact",
-  description: `Find Highgrove Retirement Village at ${site.address.street}, ${site.address.suburb}, Albany — surrounded by bush, close to shopping, clubs and parks. Get directions or send us an enquiry.`,
-  alternates: { canonical: "/location" },
-};
+export const metadata: Metadata = pageMeta({
+  title: "Contact & Location | Retirement Village Albany | Highgrove",
+  description:
+    "Visit Highgrove Retirement Village at 119 Albany Highway, Unsworth Heights, Albany, close to shops, clubs and parks. Call 09 444 6689 or send an enquiry.",
+  path: "/location",
+  image: { src: "/images/circle-entrance.png", alt: "The village entrance and gardens" },
+});
 
 const MAP_EMBED = "https://www.google.com/maps?q=119+Albany+Highway,+Unsworth+Heights,+Auckland&output=embed";
 
@@ -27,8 +30,9 @@ export default function LocationPage() {
   return (
     <>
       <InnerHero
+        path="/location"
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "Location" }]}
-        eyebrow="Our location"
+        eyebrow="Our location · Unsworth Heights, Albany"
         title="The best of both worlds."
         intro="Surrounded by bush, yet in the hub of Albany. There’s no need to retreat from the world (unless you really want to) — our location makes it easy to stay active in the wider community."
         image={{ src: "/images/circle-entrance.png", alt: "The village entrance and gardens" }}

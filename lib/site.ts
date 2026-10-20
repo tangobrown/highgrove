@@ -2,7 +2,7 @@
 
 export const site = {
   name: "Highgrove Retirement Village",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.highgrove.co.nz",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://highgrove.co.nz",
   description:
     "A family owned and operated boutique retirement village in Albany, Auckland, alongside Patrick Ferry House hospital.",
   phone: { display: "09 444 6689", short: "444 6689", href: "tel:094446689", intl: "+64 9 444 6689" },
@@ -17,6 +17,8 @@ export const site = {
     postcode: "0632",
     country: "NZ",
   },
+  /** 119 Albany Highway (OpenStreetMap). */
+  geo: { lat: -36.7602172, lng: 174.7072624 },
   hours: "Open to view Monday–Friday 10am–4pm, weekends by appointment",
   mapsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=119+Albany+Highway,+Unsworth+Heights,+Auckland",
@@ -60,11 +62,35 @@ export const nav: NavItem[] = [
   { label: "Contact", href: "/location#enquire" },
 ];
 
-export const footerLinks: NavLink[] = [
-  { label: "Independent living", href: "/independent-living" },
-  { label: "Care suites", href: "/assisted-living" },
-  { label: "Patrick Ferry House", href: "/patrick-ferry-house" },
-  { label: "Life at Highgrove", href: "/facilities" },
+export const footerGroups: { heading: string; links: NavLink[] }[] = [
+  {
+    heading: "The village",
+    links: [
+      { label: "Independent living", href: "/independent-living" },
+      { label: "Retirement apartments", href: "/apartments" },
+      { label: "Assisted living", href: "/assisted-living" },
+      { label: "Village facilities", href: "/facilities" },
+    ],
+  },
+  {
+    heading: "Care",
+    links: [
+      { label: "Patrick Ferry House", href: "/patrick-ferry-house" },
+      { label: "Rest home & hospital care", href: "/patrick-ferry-house#care" },
+      { label: "Respite & palliative care", href: "/patrick-ferry-house#care" },
+      { label: "Premium rooms", href: "/patrick-ferry-house#premium" },
+    ],
+  },
+  {
+    heading: "About",
+    links: [
+      { label: "About Highgrove", href: "/about" },
+      { label: "Our team", href: "/our-team" },
+      { label: "FAQs", href: "/faqs" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contact us", href: "/location#enquire" },
+    ],
+  },
 ];
 
 /** Build a page title in the house format. */

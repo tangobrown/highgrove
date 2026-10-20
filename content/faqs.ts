@@ -198,7 +198,7 @@ export const faqs: Faq[] = [
         before: "Please ",
         link: {
           label: "download our complaints policy (PDF)",
-          href: "https://highgrove.co.nz/wp-content/uploads/2018/02/Highgrove-Complaints-Policy-1-April-2017.pdf",
+          href: "/docs/highgrove-complaints-policy.pdf",
         },
         after: ".",
       },

@@ -9,14 +9,17 @@ export function HomeHero() {
     <section aria-labelledby="home-title">
       <div className="container-site grid-split items-center gap-12 pt-10 pb-14 sm:pt-16 sm:pb-[72px] lg:gap-14">
         <div className="max-w-[560px]">
-          <p className="mb-[22px] text-[15px] font-bold tracking-[0.14em] uppercase">Highgrove Village · Albany</p>
           <h1 id="home-title" className="text-h1-home">
+            <span className="mb-[22px] block font-sans text-[15px] leading-normal font-bold tracking-[0.14em] uppercase">
+              Highgrove Retirement Village · Albany
+            </span>{" "}
             Feels like family.
           </h1>
           <OrnamentRule className="mt-[34px] mb-[30px]" />
           <p className="max-w-[46ch] text-[19px] leading-[1.6] text-pretty text-body sm:text-[20px]">
-            Family owned and operated, Highgrove is a friendly, boutique village set amongst beautiful grounds and
-            gardens. Live independently and enjoy a wonderfully social, no-maintenance lifestyle in Albany.
+            Family owned and operated, Highgrove is a friendly, boutique retirement village set amongst beautiful
+            grounds and gardens. Live independently and enjoy a wonderfully social, no-maintenance lifestyle in Albany,
+            on Auckland’s North Shore.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3.5">
             <ButtonLink href="#visit">Book a tour today</ButtonLink>

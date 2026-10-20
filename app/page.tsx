@@ -7,14 +7,16 @@ import { OfferPanel } from "@/components/home/OfferPanel";
 import { UspStrip } from "@/components/home/UspStrip";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { pageMeta } from "@/lib/seo";
 import { campaign } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "Highgrove Retirement Village, Albany | Feels like family" },
+export const metadata: Metadata = pageMeta({
+  title: "Retirement Village Albany, Auckland | Highgrove",
   description:
-    "Family owned and operated boutique retirement village in Albany, Auckland. Independent living, care suites and Patrick Ferry House hospital on one site, set amongst beautiful grounds and gardens.",
-  alternates: { canonical: "/" },
-};
+    "Highgrove is a family-owned retirement village in Albany, Auckland, with independent living, assisted living and an on-site rest home and hospital.",
+  path: "/",
+  image: { src: "/images/photo-pool-friends.png", alt: "Two friends smiling in the indoor pool at Highgrove" },
+});
 
 export default function Home() {
   return (

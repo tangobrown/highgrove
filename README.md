@@ -49,6 +49,15 @@ Body in Markdown…
 
 The existing posts were imported from the WordPress REST API with `npm run import:posts`. Re-running it is safe, but it overwrites imported files, so stop using it once posts are edited here.
 
+## SEO
+
+- **Canonical domain** is `https://highgrove.co.nz` (no www, matching the old site's indexed URLs). Override with `NEXT_PUBLIC_SITE_URL` for staging. Requests to `www.` are redirected to the apex.
+- **Page metadata**: use `pageMeta()` from `lib/seo.ts` in each page — it sets the title, description, canonical URL and Open Graph/Twitter tags. Keep titles under 60 characters with the main keyword first, and descriptions under 155.
+- **Structured data** (`lib/schema.ts`): the village (`SeniorLivingCommunity` + `LocalBusiness`) and `WebSite` on every page, `NursingHome` on Patrick Ferry House, `BreadcrumbList` on every inner page (from `InnerHero`), `FAQPage` on FAQs and `BlogPosting` on posts.
+- **Old WordPress URLs** are permanently redirected in `lib/redirects.ts` (pages, all 45 posts that lived at the site root, categories, tags, testimonials, attachment pages and old sitemaps). The legacy post list is frozen in `content/legacy-post-slugs.json`.
+- **Headings**: the small label above each page title is part of the `<h1>`, so put the page's main search phrase there (e.g. "Patrick Ferry House · Rest home & hospital care").
+- After launch, submit `https://highgrove.co.nz/sitemap.xml` in Google Search Console and watch the Coverage report for any 404s from old links.
+
 ## Enquiries
 
 `/api/enquiry` validates input (with a honeypot field for spam) and currently only **logs** enquiries on the server. Hook up email or CRM delivery in `app/api/enquiry/route.ts` once the destination is decided.

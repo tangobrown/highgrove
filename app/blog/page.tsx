@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Suspense } from "react";
 import { CategoryFilter, Pagination } from "@/components/blog/BlogNav";
 import { FeaturedPostCard, PostCard } from "@/components/blog/PostCard";
@@ -13,12 +14,13 @@ import {
   type Category,
 } from "@/lib/posts";
 
-export const metadata: Metadata = {
-  title: "Blog",
+export const metadata: Metadata = pageMeta({
+  title: "Retirement Living Blog | Highgrove, Albany",
   description:
-    "Stories, events and updates from the Highgrove Retirement Village and Patrick Ferry House family in Albany, Auckland.",
-  alternates: { canonical: "/blog" },
-};
+    "Retirement living tips, village news and stories from Highgrove Retirement Village and Patrick Ferry House in Albany, Auckland.",
+  path: "/blog",
+  image: { src: "/images/loc-gardener.jpg", alt: "A resident with fresh produce from the village gardens" },
+});
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
 
@@ -82,7 +84,8 @@ export default function BlogPage({ searchParams }: { searchParams: SearchParams 
   return (
     <>
       <InnerHero
-        eyebrow="Highgrove blog"
+        path="/blog"
+        eyebrow="Highgrove retirement living blog"
         title="News from the village."
         intro="Stories, events and updates from the Highgrove and Patrick Ferry House family."
         image={{ src: "/images/loc-gardener.jpg", alt: "A resident with fresh produce from the village gardens" }}

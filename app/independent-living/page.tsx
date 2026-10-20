@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
 import { Section } from "@/components/sections/Section";
@@ -10,12 +11,13 @@ import { Photo } from "@/components/ui/Photo";
 import { TextLink } from "@/components/ui/TextLink";
 import { Eyebrow } from "@/components/ui/Typography";
 
-export const metadata: Metadata = {
-  title: "Independent Living",
+export const metadata: Metadata = pageMeta({
+  title: "Independent Retirement Living Albany | Highgrove",
   description:
-    "Independent retirement living in Albany: beautifully appointed, easy-care apartments, a great range of facilities and Patrick Ferry House hospital right alongside.",
-  alternates: { canonical: "/independent-living" },
-};
+    "Independent retirement living in Albany, Auckland: easy-care apartments, great facilities and an on-site rest home and hospital, all in one village.",
+  path: "/independent-living",
+  image: { src: "/images/photo-lounge.png", alt: "A light-filled apartment living room opening to a balcony" },
+});
 
 const facilityPhotos = [
   { src: "/images/photo-pool.jpg", alt: "The heated indoor pool", caption: "Heated indoor pool" },
@@ -31,7 +33,8 @@ export default function IndependentLivingPage() {
   return (
     <>
       <InnerHero
-        eyebrow="Independent living options"
+        path="/independent-living"
+        eyebrow="Independent retirement living · Albany"
         title="Life doesn’t stand still. Why should you?"
         intro="Whether your apartment is a secure place to call home between adventures, or you’d rather relax and enjoy the community, Highgrove’s beautifully appointed apartments and great range of facilities offer everything you need."
         image={{

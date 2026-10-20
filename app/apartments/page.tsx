@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
 import { NavyCta } from "@/components/sections/NavyCta";
 import { SplitFeature } from "@/components/sections/SplitFeature";
 import { Testimonials } from "@/components/sections/Testimonials";
 
-export const metadata: Metadata = {
-  title: "Apartments",
+export const metadata: Metadata = pageMeta({
+  title: "Retirement Village Apartments Albany | Highgrove",
   description:
-    "One and two bedroom retirement apartments in Albany, designed with architect Terence Kennedy — spacious open-plan living, full kitchens, double glazing and underfloor-heated bathrooms.",
-  alternates: { canonical: "/apartments" },
-};
+    "One and two bedroom retirement apartments in Albany, Auckland, designed by architect Terence Kennedy, with open-plan living, full kitchens and balconies.",
+  path: "/apartments",
+  image: { src: "/images/apartment-living-room.jpg", alt: "A resident relaxing in his apartment living room" },
+});
 
 export default function ApartmentsPage() {
   return (
     <>
       <InnerHero
-        eyebrow="Retirement village apartments"
+        path="/apartments"
+        eyebrow="Retirement village apartments · Albany"
         title="Designed for living."
         intro="No one wants to feel they’re living in a motel unit. Highgrove’s apartments, designed with renowned British architect Terence Kennedy, offer a standard of living you’d be hard pressed to find elsewhere."
         image={{ src: "/images/apartment-living-room.jpg", alt: "A resident relaxing in his apartment living room", position: "60% 50%" }}

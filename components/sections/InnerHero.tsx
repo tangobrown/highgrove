@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { breadcrumbSchema, jsonLd } from "@/lib/schema";
 
 export type Crumb = { label: string; href?: string };
 export type Anchor = { label: string; href: string };
 
 type Props = {
+  /** Route path, for breadcrumb structured data. */
+  path: string;
+  /** Keyword-rich label shown above the title. Rendered inside the H1 so search engines read it as part of the heading. */
   eyebrow: string;
   title: ReactNode;
   intro?: ReactNode;
@@ -72,14 +76,17 @@ export function PillBar({ label, children }: { label: string; children: ReactNod
 }
 
 /** Compact inner-page hero: breadcrumb, text + circle photo, then the anchor bar. */
-export function InnerHero({ eyebrow, title, intro, image, crumbs, anchors, anchorsLabel = "On this page", bar }: Props) {
+export function InnerHero({ path, eyebrow, title, intro, image, crumbs, anchors, anchorsLabel = "On this page", bar }: Props) {
   return (
     <section className="container-site pt-9">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbSchema(crumbs, path))} />
       <Breadcrumbs crumbs={crumbs} className="mb-7" />
       <div className="flex flex-col-reverse items-start gap-8 pb-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-14">
         <div className="min-w-0 flex-[1_1_460px]">
-          <p className="eyebrow mb-3.5">{eyebrow}</p>
-          <h1 className="text-h1 mb-[18px]">{title}</h1>
+          <h1 className="text-h1 mb-[18px]">
+            <span className="eyebrow mb-3.5 block">{eyebrow}</span>{" "}
+            {title}
+          </h1>
           {intro && <p className="text-lead max-w-[56ch]">{intro}</p>}
         </div>
         <div className="relative size-[180px] shrink-0 overflow-hidden rounded-full bg-rule/40 sm:size-[clamp(190px,24vw,300px)]">

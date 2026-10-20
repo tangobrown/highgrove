@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
 import { Section } from "@/components/sections/Section";
@@ -7,12 +8,13 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { TextLink } from "@/components/ui/TextLink";
 import { Eyebrow, SectionHeading } from "@/components/ui/Typography";
 
-export const metadata: Metadata = {
-  title: "About Us",
+export const metadata: Metadata = pageMeta({
+  title: "About Highgrove | Family-Owned Retirement Village Albany",
   description:
-    "Highgrove is a proudly family owned and operated retirement village in Albany, Auckland — the vision of Patrick and Gerrie Ferry, built on a simple ethos: family first.",
-  alternates: { canonical: "/about" },
-};
+    "Highgrove is a family owned and operated retirement village in Albany, Auckland, founded by Patrick and Gerrie Ferry on a simple ethos: family first.",
+  path: "/about",
+  image: { src: "/images/about-group.jpg", alt: "A group of Highgrove residents laughing together" },
+});
 
 const timeline = [
   {
@@ -41,8 +43,9 @@ export default function AboutPage() {
   return (
     <>
       <InnerHero
+        path="/about"
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "About us" }]}
-        eyebrow="About Highgrove"
+        eyebrow="About Highgrove Retirement Village"
         title="Family first, always."
         intro="Highgrove Retirement Village and Patrick Ferry Hospital are the brainchild of the late Patrick Ferry and his wife Gerrie. Highgrove is a family affair, where the driving ethos is family first."
         image={{ src: "/images/about-group.jpg", alt: "A group of Highgrove residents laughing together", position: "50% 40%" }}
