@@ -32,7 +32,7 @@ export function HomeHero() {
             alt="Residents sharing a sunny lunch on a village courtyard"
             shape="arch"
             aspect={0.8}
-            position="55% 50%"
+            position="50% 50%"
             sizes="(min-width: 1024px) 540px, (min-width: 640px) 580px, 92vw"
             priority
           />
