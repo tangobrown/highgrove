@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
+import { RelatedPages, related } from "@/components/sections/RelatedPages";
 import { CardGrid, type NumberedCard } from "@/components/sections/CardGrid";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { Gallery, type GalleryItem } from "@/components/sections/Gallery";
@@ -157,6 +158,7 @@ export default function PatrickFerryHousePage() {
         </div>
       </Section>
 
+      <RelatedPages pages={[related.independent, related.team, related.faqs]} tone="white" />
       <Testimonials />
       <EnquirySection />
     </>

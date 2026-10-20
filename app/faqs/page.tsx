@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
+import { RelatedPages, related } from "@/components/sections/RelatedPages";
 import { FaqAccordion } from "@/components/faqs/FaqAccordion";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -48,6 +49,7 @@ export default function FaqsPage() {
         <FaqAccordion items={faqs} />
       </Section>
 
+      <RelatedPages pages={[related.team, related.pfh, related.location]} />
       <Testimonials />
       <EnquirySection />
 

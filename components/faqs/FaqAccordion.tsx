@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useId, useState, type ReactNode } from "react";
 import type { Faq, FaqBlock } from "@/content/faqs";
 
@@ -36,9 +37,15 @@ function Block({ block }: { block: FaqBlock }) {
   return (
     <p>
       {block.before}
-      <a href={block.link.href} target="_blank" rel="noopener noreferrer" className={linkCls}>
-        {block.link.label}
-      </a>
+      {/^https?:/.test(block.link.href) || block.link.href.endsWith(".pdf") ? (
+        <a href={block.link.href} target="_blank" rel="noopener noreferrer" className={linkCls}>
+          {block.link.label}
+        </a>
+      ) : (
+        <Link href={block.link.href} className={linkCls}>
+          {block.link.label}
+        </Link>
+      )}
       {block.after}
     </p>
   );

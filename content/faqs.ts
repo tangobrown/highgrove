@@ -20,6 +20,7 @@ export const faqs: Faq[] = [
     q: "Who owns the village?",
     a: [
       "The village is owned and operated by Highgrove Holdings Limited, with Geraldine Ferry, Khim Ferry and Linda McFadyen as Directors. Geraldine, Khim and Linda are committed to providing a village environment that is supportive, happy and caring.",
+      { before: "Read more about ", link: { label: "the history of Highgrove", href: "/about#history" }, after: "." },
     ],
   },
   {
@@ -38,6 +39,7 @@ export const faqs: Faq[] = [
       },
       "The most common phrase we hear from existing residents is “I wish I had made the decision to move sooner.” Villages provide a haven for people who seek an improved quality of life and peace of mind, financial and physical security, whilst retaining their independence within an open environment.",
       "Village life is designed to afford you a lifestyle with abundant advantages not found in conventional suburban living: a place to relax and set a pace for yourself, with the opportunity to share skills and talents with other village residents, if you so desire.",
+      { before: "Find out more about ", link: { label: "independent living at Highgrove", href: "/independent-living" }, after: "." },
     ],
   },
   {
@@ -45,6 +47,7 @@ export const faqs: Faq[] = [
     a: [
       "Gerrie and Khim are a mother and daughter team. Gerrie is a Registered Nurse and well qualified as a people person. Khim holds a Bachelor of Commerce and Arts from Auckland University and has been involved in the family business for many years.",
       "The family continue to own and operate Greenview Park Village, established in 1997, which they designed and built. Visit Greenview online at www.greenview.co.nz.",
+      { before: "Meet Geraldine, Khim and the rest of the family on our ", link: { label: "Our Team page", href: "/our-team" }, after: "." },
     ],
   },
   {
@@ -67,6 +70,7 @@ export const faqs: Faq[] = [
         ],
       },
       "On completing an Application Form, you will be asked to pay a deposit of $2,000, with no further payment necessary until final settlement. The deposit will be held by the Statutory Supervisor and is fully refundable on request (with any interest accrued) if you choose not to proceed.",
+      { before: "Take a look at our ", link: { label: "one and two bedroom apartments", href: "/apartments" }, after: ", then call us to arrange a viewing." },
     ],
   },
   {
@@ -139,6 +143,7 @@ export const faqs: Faq[] = [
     q: "When will the Village Facilities be available?",
     a: [
       "Community facilities are available and ready for your enjoyment. Facilities include a dining room, bar and club lounge, indoor heated pool and spa, indoor bowls, gymnasium, library with internet access and hair salon.",
+      { before: "See everything on offer on our ", link: { label: "village facilities page", href: "/facilities" }, after: "." },
     ],
   },
   {
@@ -151,12 +156,14 @@ export const faqs: Faq[] = [
     q: "What additional services will be provided?",
     a: [
       "Additional Service Packages are available to meet Residents’ needs. Service packages can cater for a wide variety of needs; these can incorporate anything from meals, laundry and cleaning services to the delivery of care in your home.",
+      { before: "Learn more about our ", link: { label: "assisted living services", href: "/assisted-living" }, after: "." },
     ],
   },
   {
     q: "Are there provisions for on-going care?",
     a: [
       "Yes. Patrick Ferry House, our on-site Hospital, is adjacent to the Village. Patrick Ferry House will provide Emergency Assistance and the requested Additional Services. As a Highgrove Resident, you will have a right of priority admission over any waiting list.",
+      { link: { label: "Patrick Ferry House", href: "/patrick-ferry-house" }, after: ", our on-site rest home and hospital, offers rest home, hospital-level, respite and palliative care right alongside the village." },
     ],
   },
   {

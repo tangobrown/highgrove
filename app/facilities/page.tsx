@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
+import { RelatedPages, related } from "@/components/sections/RelatedPages";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { Gallery, type GalleryItem } from "@/components/sections/Gallery";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -85,6 +86,7 @@ export default function FacilitiesPage() {
         <Gallery items={gallery} min={230} />
       </Section>
 
+      <RelatedPages pages={[related.independent, related.location, related.pfh]} />
       <Testimonials />
       <EnquirySection />
     </>

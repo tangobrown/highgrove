@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
+import { InlineLink } from "@/components/ui/InlineLink";
+import { TextLink } from "@/components/ui/TextLink";
+import { RelatedPages, related } from "@/components/sections/RelatedPages";
 import type { ReactNode } from "react";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -31,7 +34,7 @@ export default function LocationPage() {
     <>
       <InnerHero
         path="/location"
-        crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "Location" }]}
+        crumbs={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Location" }]}
         eyebrow="Our location · Unsworth Heights, Albany"
         title="The best of both worlds."
         intro="Surrounded by bush, yet in the hub of Albany. There’s no need to retreat from the world (unless you really want to) — our location makes it easy to stay active in the wider community."
@@ -63,8 +66,9 @@ export default function LocationPage() {
                 </li>
               ))}
             </ul>
-            <div>
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-4">
               <ButtonLink href={site.mapsUrl}>Open in Google Maps</ButtonLink>
+              <TextLink href="#enquire">Book a tour</TextLink>
             </div>
           </div>
           <iframe
@@ -85,7 +89,11 @@ export default function LocationPage() {
         title="Everything within a 10 minute drive"
         body={[
           "Take your pick from the Albany Megacentre, Milford Shops, Glenfield Mall and Wairau Park, with smaller convenience shops close by.",
-          "Don’t drive? The village bus runs shopping trips to the main centres three times a week, so you can enjoy a spot of shopping or top up the groceries.",
+          <>
+            Don’t drive? The village bus runs shopping trips to the main centres three times a week, so you can enjoy a
+            spot of shopping or top up the groceries — one of the many{" "}
+            <InlineLink href="/assisted-living">services available to residents</InlineLink>.
+          </>,
         ]}
       />
 
@@ -98,6 +106,10 @@ export default function LocationPage() {
         title="Golf, bowls, tennis — you name it"
         body={[
           "Highgrove is surrounded by clubs and recreational facilities, from golf and bowling to tennis, service clubs and Probus. The Birkenhead, East Coast Bays and Takapuna RSAs are all within a 10 minute drive.",
+          <>
+            And there’s plenty to do without leaving home, from the heated indoor pool to pétanque and our own
+            boardwalk — see our <InlineLink href="/facilities">village facilities</InlineLink>.
+          </>,
         ]}
       />
 
@@ -113,6 +125,7 @@ export default function LocationPage() {
         ]}
       />
 
+      <RelatedPages pages={[related.facilities, related.independent, related.faqs]} tone="white" />
       <Testimonials />
       <EnquirySection />
     </>

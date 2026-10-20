@@ -6,6 +6,8 @@ import { Section } from "@/components/sections/Section";
 import { SplitFeature } from "@/components/sections/SplitFeature";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TextLink } from "@/components/ui/TextLink";
+import { InlineLink } from "@/components/ui/InlineLink";
+import { RelatedPages, related } from "@/components/sections/RelatedPages";
 import { Eyebrow, SectionHeading } from "@/components/ui/Typography";
 
 export const metadata: Metadata = pageMeta({
@@ -44,10 +46,16 @@ export default function AboutPage() {
     <>
       <InnerHero
         path="/about"
-        crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "About us" }]}
+        crumbs={[{ label: "Home", href: "/" }, { label: "About us" }]}
         eyebrow="About Highgrove Retirement Village"
         title="Family first, always."
-        intro="Highgrove Retirement Village and Patrick Ferry Hospital are the brainchild of the late Patrick Ferry and his wife Gerrie. Highgrove is a family affair, where the driving ethos is family first."
+        intro={
+          <>
+            Highgrove Retirement Village and <InlineLink href="/patrick-ferry-house">Patrick Ferry House</InlineLink>{" "}
+            hospital are the brainchild of the late Patrick Ferry and his wife Gerrie. Highgrove is a family affair,
+            where the driving ethos is family first.
+          </>
+        }
         image={{ src: "/images/about-group.jpg", alt: "A group of Highgrove residents laughing together", position: "50% 40%" }}
         anchors={[
           { label: "Our village", href: "#village" },
@@ -69,7 +77,7 @@ export default function AboutPage() {
             </p>
             <p className="text-copy max-w-[52ch]">
               Everything we do is centred on providing the best place to live — there are no compromises when it comes
-              to how residents are cared for and treated by our team.
+              to how residents are cared for and treated by <InlineLink href="/our-team">our team</InlineLink>.
             </p>
           </div>
         </div>
@@ -86,6 +94,9 @@ export default function AboutPage() {
             </li>
           ))}
         </ol>
+        <div className="mt-12">
+          <TextLink href="/our-team">Meet the Ferry family and our team</TextLink>
+        </div>
       </Section>
 
       <SplitFeature
@@ -95,8 +106,26 @@ export default function AboutPage() {
         eyebrow="The concept"
         title="First-class facilities, personal care, an enviable lifestyle."
         body={[
-          "The Highgrove concept replicates Greenview Park and Terence Kennedy House: first-class facilities that let residents keep living life their way, backed by outstanding personal service and, most importantly, personal care.",
-          "Today Highgrove stands as a testament to Patrick and Gerrie’s vision — a family friendly, boutique village of 50 apartments, side by side with Patrick Ferry House hospital.",
+          <>
+            The Highgrove concept replicates Greenview Park and Terence Kennedy House:{" "}
+            <InlineLink href="/facilities" onTeal>
+              first-class facilities
+            </InlineLink>{" "}
+            that let residents keep living life their way, backed by outstanding personal service and, most
+            importantly, personal care.
+          </>,
+          <>
+            Today Highgrove stands as a testament to Patrick and Gerrie’s vision — a family friendly, boutique village
+            of{" "}
+            <InlineLink href="/apartments" onTeal>
+              50 apartments
+            </InlineLink>
+            , side by side with{" "}
+            <InlineLink href="/patrick-ferry-house" onTeal>
+              Patrick Ferry House
+            </InlineLink>{" "}
+            hospital.
+          </>,
         ]}
       />
 
@@ -112,6 +141,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <RelatedPages pages={[related.team, related.location, related.pfh]} />
       <Testimonials />
       <EnquirySection />
     </>

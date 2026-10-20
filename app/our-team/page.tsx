@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
+import { InlineLink } from "@/components/ui/InlineLink";
+import { RelatedPages, related } from "@/components/sections/RelatedPages";
 import Image from "next/image";
 import { EnquirySection } from "@/components/sections/EnquirySection";
 import { InnerHero } from "@/components/sections/InnerHero";
@@ -22,7 +24,7 @@ export default function OurTeamPage() {
     <>
       <InnerHero
         path="/our-team"
-        crumbs={[{ label: "Home", href: "/" }, { label: "About" }, { label: "Our team" }]}
+        crumbs={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }, { label: "Our team" }]}
         eyebrow="Our team · The Highgrove family"
         title="Friendly, approachable, caring."
         intro="Qualities our team have in abundance. Experts in their respective fields, our people see Highgrove as their second home."
@@ -35,7 +37,18 @@ export default function OurTeamPage() {
       />
 
       <Section id="team" tone="white">
-        <SectionHeading eyebrow="Operations team" title="The family behind the village" className="mb-12" />
+        <SectionHeading
+          eyebrow="Operations team"
+          title="The family behind the village"
+          intro={
+            <>
+              Highgrove was founded by Patrick and Gerrie Ferry and is still run by the family today — read{" "}
+              <InlineLink href="/about#history">our history</InlineLink>, or see how our nurses care for residents at{" "}
+              <InlineLink href="/patrick-ferry-house">Patrick Ferry House</InlineLink>.
+            </>
+          }
+          className="mb-12"
+        />
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,480px),1fr))] gap-6">
           {team.map((m) => (
             <article
@@ -66,6 +79,7 @@ export default function OurTeamPage() {
         </div>
       </Section>
 
+      <RelatedPages pages={[related.about, related.pfh, related.location]} />
       <Testimonials />
       <EnquirySection />
     </>
