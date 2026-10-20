@@ -28,11 +28,11 @@ export function HomeHero() {
 
         <div className="relative mx-auto w-full max-w-[540px]">
           <Photo
-            src="/images/home-courtyard-lunch.jpg"
-            alt="Residents sharing a sunny lunch on a village courtyard"
+            src="/images/home-petanque-game.jpg"
+            alt="Residents enjoying a game of pétanque on the village court"
             shape="arch"
             aspect={0.8}
-            position="50% 50%"
+            position="50% 40%"
             sizes="(min-width: 1024px) 540px, (min-width: 640px) 580px, 92vw"
             priority
           />
