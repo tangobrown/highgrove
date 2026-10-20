@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonClasses } from "@/components/ui/Button";
 import { formatPostDate, type PostMeta } from "@/lib/posts";
+import { Arrow } from "@/components/ui/Arrow";
 
 /** "Village life · 4 October 2024" */
 export function PostMetaLine({ post, className = "" }: { post: Pick<PostMeta, "category" | "date">; className?: string }) {
@@ -63,7 +64,7 @@ export function PostImage({
   );
 }
 
-/** Blog card: image, meta, H3, excerpt and "Read more →". The whole card is the link. */
+/** Blog card: image, meta, H3, excerpt and "Read more" with an arrow. The whole card is the link. */
 export function PostCard({ post, headingLevel = "h3" }: { post: PostMeta; headingLevel?: "h2" | "h3" }) {
   const Heading = headingLevel;
   return (
@@ -77,8 +78,8 @@ export function PostCard({ post, headingLevel = "h3" }: { post: PostMeta; headin
       <PostMetaLine post={post} />
       <Heading className="text-h3 transition-colors duration-200 group-hover:text-green-text">{post.title}</Heading>
       <p className="text-[17px] leading-[1.6] text-body">{post.excerpt}</p>
-      <span className="self-start border-b-2 border-green pb-0.5 text-base font-bold">
-        Read more <span aria-hidden="true">→</span>
+      <span className="inline-flex items-center gap-1.5 self-start border-b-2 border-green pb-0.5 text-base font-bold">
+        Read more <Arrow />
       </span>
     </Link>
   );

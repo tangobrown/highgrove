@@ -11,6 +11,7 @@ import { NavyCta } from "@/components/sections/NavyCta";
 import { TextLink } from "@/components/ui/TextLink";
 import { bodyWithoutLead, getAllPosts, getPost, getRelatedPosts, type Author } from "@/lib/posts";
 import { site } from "@/lib/site";
+import { Arrow } from "@/components/ui/Arrow";
 
 type Params = Promise<{ slug: string }>;
 
@@ -120,8 +121,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
                 href="/blog"
                 className="inline-flex min-h-11 items-center self-center text-base font-bold transition-colors duration-200 hover:text-green-text"
               >
-                <span className="border-b-2 border-green pb-0.5">
-                  <span aria-hidden="true">← </span>Back to the blog
+                <span className="inline-flex items-center gap-1.5 border-b-2 border-green pb-0.5">
+                  <Arrow direction="left" />
+                  Back to the blog
                 </span>
               </Link>
               <ShareButtons url={url} title={post.title} />

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Photo } from "@/components/ui/Photo";
+import { Arrow } from "@/components/ui/Arrow";
 
 const options = [
   {
@@ -70,9 +71,9 @@ export function LivingOptions() {
                   </span>
                   <h3 className="font-display text-[28px] leading-[1.15] sm:text-[32px]">{o.title}</h3>
                   <p className="grow text-[17px] leading-[1.6] text-body">{o.body}</p>
-                  <span className="mt-2 self-start border-b-2 border-green pb-[3px] text-base font-bold transition-colors duration-200 group-hover:text-green-text">
+                  <span className="mt-2 inline-flex items-center gap-1.5 self-start border-b-2 border-green pb-[3px] text-base font-bold transition-colors duration-200 group-hover:text-green-text">
                     {o.link}
-                    <span aria-hidden="true"> →</span>
+                    <Arrow />
                   </span>
                 </div>
               </Link>

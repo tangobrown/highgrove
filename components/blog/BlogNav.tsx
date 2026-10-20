@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PillBar } from "@/components/sections/InnerHero";
 import { categories, categorySlug, type Category } from "@/lib/posts";
+import { Arrow } from "@/components/ui/Arrow";
 
 /** Build a /blog URL for a category and page. */
 export function blogHref({ category, page }: { category?: Category; page?: number }) {
@@ -57,9 +58,10 @@ export function Pagination({ page, totalPages, category }: { page: number; total
       {page > 1 && (
         <Link
           href={`${blogHref({ category, page: page - 1 })}#posts`}
-          className={`mr-1.5 inline-flex min-h-[46px] items-center rounded-full px-[22px] font-bold ${outline}`}
+          className={`mr-1.5 inline-flex min-h-[46px] items-center gap-1.5 rounded-full px-[22px] font-bold ${outline}`}
         >
-          <span aria-hidden="true">←&nbsp;</span>Previous
+          <Arrow direction="left" />
+          Previous
         </Link>
       )}
       {pages.map((n) =>
@@ -78,9 +80,10 @@ export function Pagination({ page, totalPages, category }: { page: number; total
       {page < totalPages && (
         <Link
           href={`${blogHref({ category, page: page + 1 })}#posts`}
-          className={`ml-1.5 inline-flex min-h-[46px] items-center rounded-full px-[22px] font-bold ${outline}`}
+          className={`ml-1.5 inline-flex min-h-[46px] items-center gap-1.5 rounded-full px-[22px] font-bold ${outline}`}
         >
-          Next<span aria-hidden="true">&nbsp;→</span>
+          Next
+          <Arrow />
         </Link>
       )}
     </nav>
