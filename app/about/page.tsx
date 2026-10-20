@@ -97,8 +97,8 @@ export default function AboutPage() {
         ]}
       />
 
-      <section aria-label="Memberships" className="bg-cream">
-        <div className="container-site pt-14 pb-2 sm:pt-[72px]">
+      <section aria-label="Memberships" className="bg-white">
+        <div className="container-site pt-14 sm:pt-[72px]">
           <div className="flex flex-wrap items-center justify-between gap-x-12 gap-y-5 border-y border-rule py-8">
             <p className="max-w-[60ch] text-lg leading-[1.6] text-body">
               We’re proud members of the <strong className="text-teal">New Zealand Aged Care Association</strong> and
