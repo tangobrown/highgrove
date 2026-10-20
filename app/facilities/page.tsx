@@ -19,10 +19,10 @@ const gallery: GalleryItem[] = [
   { src: "/images/fac-poolroom.jpg", alt: "Heated indoor pool" },
   { src: "/images/fac-gym.jpg", alt: "Fitness centre" },
   { src: "/images/fac-library.jpg", alt: "Library" },
-  { src: "/images/fac-petanque.jpg", alt: "Petanque" },
+  { src: "/images/petanque-balls.jpg", alt: "Petanque" },
   { src: "/images/fac-billiards.jpg", alt: "Pool table & darts" },
   { src: "/images/fac-boardwalk.jpg", alt: "Boardwalk" },
-  { src: "/images/fac-chess.jpg", alt: "Outdoor chess" },
+  { src: "/images/outdoor-chess.jpg", alt: "Outdoor chess" },
 ];
 
 export default function FacilitiesPage() {

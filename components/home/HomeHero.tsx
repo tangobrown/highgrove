@@ -28,7 +28,7 @@ export function HomeHero() {
 
         <div className="relative mx-auto w-full max-w-[540px]">
           <Photo
-            src="/images/home-hero.jpg"
+            src="/images/home-courtyard-lunch.jpg"
             alt="Residents sharing a sunny lunch on a village courtyard"
             shape="arch"
             aspect={0.8}

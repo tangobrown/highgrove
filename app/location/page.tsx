@@ -89,7 +89,7 @@ export default function LocationPage() {
         id="clubs"
         tone="white"
         reverse
-        image={{ src: "/images/loc-petanque.jpg", alt: "Petanque boules on gravel" }}
+        image={{ src: "/images/petanque-balls.jpg", alt: "Petanque boules on gravel" }}
         eyebrow="Clubs & recreation"
         title="Golf, bowls, tennis — you name it"
         body={[

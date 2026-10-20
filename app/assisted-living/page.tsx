@@ -61,7 +61,7 @@ export default function AssistedLivingPage() {
       <section aria-label="Life at Highgrove" className="bg-white">
         <div className="container-site grid gap-6 pt-14 sm:grid-cols-2 sm:pt-16 lg:pt-24">
           <Photo
-            src="/images/al-garden-table.jpg"
+            src="/images/garden-table-residents.jpg"
             alt="Residents chatting around a table in the village garden"
             shape="card"
             aspect={1.3}

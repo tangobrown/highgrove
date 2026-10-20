@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const facilityPhotos = [
   { src: "/images/photo-pool.jpg", alt: "The heated indoor pool", caption: "Heated indoor pool" },
   {
-    src: "/images/garden-hero.jpg",
+    src: "/images/garden-produce-couple.jpg",
     alt: "Residents with produce from the village gardens",
     caption: "Grounds & gardens",
     position: "70% 40%",
