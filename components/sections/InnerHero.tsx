@@ -88,6 +88,7 @@ export function InnerHero({ eyebrow, title, intro, image, crumbs, anchors, ancho
             alt={image.alt}
             fill
             priority
+            quality={90}
             sizes="(min-width: 640px) 300px, 180px"
             className="object-cover"
             style={image.position ? { objectPosition: image.position } : undefined}

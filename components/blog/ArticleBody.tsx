@@ -86,7 +86,7 @@ const components: Components = {
     return (
       <figure className="my-12">
         <div className="relative aspect-[1.5] w-full overflow-hidden rounded-[20px] bg-rule/40">
-          <Image src={src} alt={alt} fill sizes="(min-width: 800px) 700px, 100vw" className="object-cover" />
+          <Image src={src} alt={alt} fill quality={90} sizes="(min-width: 800px) 700px, 100vw" className="object-cover" />
         </div>
         {title && <figcaption className="mt-3.5 text-[15px] text-muted">{title}</figcaption>}
       </figure>

@@ -53,6 +53,7 @@ export function Photo({
         fill
         sizes={sizes}
         priority={priority}
+        quality={90}
         className={`object-cover ${imgClassName}`}
         style={position ? { objectPosition: position } : undefined}
       />

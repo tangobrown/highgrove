@@ -54,6 +54,7 @@ export function PostImage({
     <div className={`relative w-full overflow-hidden bg-rule/40 ${aspectClass} ${className}`} style={style}>
       <Image
         src={post.heroImage}
+        quality={90}
         alt={post.heroAlt}
         fill
         sizes={sizes}

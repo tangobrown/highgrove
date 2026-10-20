@@ -42,6 +42,7 @@ export default function OurTeamPage() {
               {/* Source headshots are tiny (92×141) — cropped into a circle. */}
               <Image
                 src={m.image}
+                quality={90}
                 alt={m.alt}
                 width={112}
                 height={112}

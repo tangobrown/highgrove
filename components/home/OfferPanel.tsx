@@ -33,6 +33,7 @@ export function OfferPanel() {
           <div className="relative min-h-[300px] sm:min-h-[420px]">
             <Image
               src="/images/photo-pool-friends.png"
+              quality={90}
               alt="Two friends smiling in the indoor pool"
               fill
               sizes="(min-width: 1024px) 608px, 100vw"
