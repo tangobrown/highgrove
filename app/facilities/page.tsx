@@ -19,8 +19,18 @@ const gallery: GalleryItem[] = [
   { src: "/images/fac-poolroom.jpg", alt: "Heated indoor pool" },
   { src: "/images/fac-gym.jpg", alt: "Fitness centre" },
   { src: "/images/fac-library.jpg", alt: "Library" },
+  {
+    src: "/images/library-reading.jpg",
+    alt: "Two residents laughing over a magazine in the library",
+    caption: "Catching up in the library",
+  },
   { src: "/images/petanque-balls.jpg", alt: "Petanque" },
   { src: "/images/fac-billiards.jpg", alt: "Pool table & darts" },
+  {
+    src: "/images/residents-playing-pool.jpg",
+    alt: "Residents playing a game of pool in the lounge",
+    caption: "A friendly game of pool",
+  },
   { src: "/images/fac-boardwalk.jpg", alt: "Boardwalk" },
   { src: "/images/outdoor-chess.jpg", alt: "Outdoor chess" },
 ];
