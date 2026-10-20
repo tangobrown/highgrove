@@ -28,11 +28,11 @@ export function HomeHero() {
 
         <div className="relative mx-auto w-full max-w-[540px]">
           <Photo
-            src="/images/home-petanque-game.jpg"
-            alt="Residents enjoying a game of pétanque on the village court"
+            src="/images/photo-pool-friends.png"
+            alt="Two friends smiling in the indoor pool"
             shape="arch"
             aspect={0.8}
-            position="50% 40%"
+            position="0% 50%"
             sizes="(min-width: 1024px) 540px, (min-width: 640px) 580px, 92vw"
             priority
           />

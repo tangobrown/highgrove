@@ -32,12 +32,12 @@ export function OfferPanel() {
           </div>
           <div className="relative min-h-[300px] sm:min-h-[420px]">
             <Image
-              src="/images/photo-pool-friends.png"
+              src="/images/petanque-game.jpg"
               quality={90}
-              alt="Two friends smiling in the indoor pool"
+              alt="Residents enjoying a game of pétanque on the village court"
               fill
               sizes="(min-width: 1024px) 608px, 100vw"
-              className="object-cover"
+              className="object-cover object-[50%_35%]"
             />
           </div>
         </div>
