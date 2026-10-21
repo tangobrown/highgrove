@@ -42,4 +42,4 @@ Last, but certainly not least, load up on your favourite sweaters, sweatpants an
 
 As the leaves turn to orange, and the beach towels get placed away for next season, consider adopting the hygge philosophy into your life. Live life warmly and with gratitude for the simplest moments. Welcome hygge into your home, and it too will welcome you home.
 
-To explore what living at Highgrove Retirement Village is like, [book a viewing](/location#enquire) or read more on our [website](/).
+To explore what living at Highgrove Retirement Village is like, [book a viewing](/contact) or read more on our [website](/).

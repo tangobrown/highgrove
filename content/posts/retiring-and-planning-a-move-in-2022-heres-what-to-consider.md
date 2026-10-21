@@ -52,4 +52,4 @@ There isn’t any rush to move tomorrow, so take the time to look at all of your
 
 And of course you’re always welcome to visit those locations, to get a real life experience of what it could be like to live there.
 
-While moving can be a little overwhelming, especially if it is from a home you have lived in for many years, there are ways to make it an easy, smooth transition. If you have any questions about how we go about helping people to settle into our retirement villages, [we’d](/location#enquire) love to hear from you.
+While moving can be a little overwhelming, especially if it is from a home you have lived in for many years, there are ways to make it an easy, smooth transition. If you have any questions about how we go about helping people to settle into our retirement villages, [we’d](/contact) love to hear from you.

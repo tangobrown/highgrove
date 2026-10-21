@@ -56,4 +56,4 @@ Self-talk has the potential to knock us down and sadly, keep us there, especiall
 
 Self-kindness can feel a bit ‘weird’ when you first start out. But know that it’s an important part of your well being toolkit. Just like nourishing our bodies with healthy food and moving on a regular basis, self-kindness is another element of looking after ourselves.
 
-If you are looking for a change in 2023, we’d love to chat. [Get in touch with the friendly team here at Highgrove here.](/location#enquire)
+If you are looking for a change in 2023, we’d love to chat. [Get in touch with the friendly team here at Highgrove here.](/contact)

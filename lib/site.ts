@@ -6,7 +6,7 @@ export const site = {
   description:
     "A family owned and operated boutique retirement village in Albany, Auckland, alongside Patrick Ferry House hospital.",
   phone: { display: "09 444 6689", short: "444 6689", href: "tel:094446689", intl: "+64 9 444 6689" },
-  tours: { name: "Carol", display: "0274 970 784", href: "tel:0274970784" },
+  tours: { name: "Carol", display: "0274 970 784", href: "tel:0274970784", intl: "+64 27 497 0784" },
   email: "enquiries@highgrove.co.nz",
   address: {
     street: "119 Albany Highway",
@@ -22,6 +22,7 @@ export const site = {
   hours: "Open to view Monday–Friday 10am–4pm, weekends by appointment",
   mapsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=119+Albany+Highway,+Unsworth+Heights,+Auckland",
+  mapEmbed: "https://www.google.com/maps?q=119+Albany+Highway,+Unsworth+Heights,+Auckland&output=embed",
   /** On-site hospital bed count. New ads say 77; the old About page said 74. */
   bedCount: 77,
 } as const;
@@ -59,7 +60,7 @@ export const nav: NavItem[] = [
       { label: "Blog", href: "/blog" },
     ],
   },
-  { label: "Contact", href: "/location#enquire" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const footerGroups: { heading: string; links: NavLink[] }[] = [
@@ -88,7 +89,7 @@ export const footerGroups: { heading: string; links: NavLink[] }[] = [
       { label: "Our team", href: "/our-team" },
       { label: "FAQs", href: "/faqs" },
       { label: "Blog", href: "/blog" },
-      { label: "Contact us", href: "/location#enquire" },
+      { label: "Contact us", href: "/contact" },
     ],
   },
 ];

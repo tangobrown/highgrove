@@ -36,4 +36,4 @@ There is far more to discovering your family history than just names and dates. 
 
 History can be considered cold, impersonal or stuffy, but for these genealogists, it is anything but. It is an ever-growing story, as rich with details and warmth as our own lives. They see history and genealogy as a way to preserve their journey for everyone. They encourage looking into your genealogy and talking with younger generations. Next time you’re in a public library, check to see if they have a branch of genealogists. Their passion for discovery and wealth of knowledge may lead to a revelation of your own.
 
-To explore what living at Highgrove Retirement Village is like, [book a viewing](/location#enquire) or read more on our [website](/).
+To explore what living at Highgrove Retirement Village is like, [book a viewing](/contact) or read more on our [website](/).

@@ -46,4 +46,4 @@ If the retirement blues persist or become overwhelming, it’s important to seek
 
 The retirement blues are a common experience for many retirees as they navigate the transition to a new phase of life. By acknowledging and understanding your emotions, redefining your identity and purpose, building a supportive social network, staying physically and mentally active, setting meaningful goals, embracing new opportunities, and seeking professional help if needed, you can overcome these challenges and embrace the joys of retirement. Remember, retirement is a time of exploration, growth, and personal fulfilment. Embrace the journey and make the most of this exciting chapter in your life.
 
-If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch.](/location#enquire)
+If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch.](/contact)

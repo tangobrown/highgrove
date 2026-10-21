@@ -47,6 +47,24 @@ export const organizationSchema = {
   priceRange: "$$",
   knowsAbout: ["Retirement village living", "Independent living", "Assisted living", ...careServices],
   subOrganization: { "@id": PFH_ID },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: site.phone.intl,
+      email: site.email,
+      areaServed: "NZ",
+      availableLanguage: "en",
+    },
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      name: `Village tours (${site.tours.name})`,
+      telephone: site.tours.intl,
+      areaServed: "NZ",
+      availableLanguage: "en",
+    },
+  ],
   memberOf: [
     { "@type": "Organization", name: "Retirement Villages Association of New Zealand" },
     { "@type": "Organization", name: "New Zealand Aged Care Association" },
@@ -79,6 +97,14 @@ export const nursingHomeSchema = {
   parentOrganization: { "@id": ORG_ID },
   knowsAbout: careServices,
   memberOf: { "@type": "Organization", name: "New Zealand Aged Care Association" },
+};
+
+export const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  url: absoluteUrl("/contact"),
+  name: "Contact Highgrove Retirement Village",
+  mainEntity: { "@id": ORG_ID },
 };
 
 export function siteGraph() {

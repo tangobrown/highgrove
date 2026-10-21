@@ -65,4 +65,4 @@ Perhaps most critically, how do you feel walking through the village? Our reside
 
 There are lots of things to think about when visiting a retirement village for the first time. We hope that with this guide you will find the village of your dreams.
 
-If you need help with your retirement planning or would like to visit Highgrove, please [get in touch](/location#enquire). We look forward to hearing from you!
+If you need help with your retirement planning or would like to visit Highgrove, please [get in touch](/contact). We look forward to hearing from you!

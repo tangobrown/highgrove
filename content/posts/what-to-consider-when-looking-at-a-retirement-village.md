@@ -42,4 +42,4 @@ Moving can be a big shift, so it is important to find a village that feels like 
 
 Finding your next home doesn’t need to be scary. Consider these six key things when looking at your potential homes so you find the perfect fit.
 
-To explore what living at Highgrove Retirement Village is like, [book a viewing](/location#enquire) or read more on our [website](/).
+To explore what living at Highgrove Retirement Village is like, [book a viewing](/contact) or read more on our [website](/).

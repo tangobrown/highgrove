@@ -50,4 +50,4 @@ Luckily, today there are so many options for eco-friendly cleaning, so you can a
 
 Taking the first step towards a more eco-friendly life is something to celebrate! While life is undoubtedly easier with plastics, fast fashion and chucking everything in the bin, lets love our earth with small changes that have a big impact. What things are you going to try?
 
-To explore what living at Highgrove Retirement Village is like, [book a viewing](/location#enquire) or read more on our [website](/).
+To explore what living at Highgrove Retirement Village is like, [book a viewing](/contact) or read more on our [website](/).

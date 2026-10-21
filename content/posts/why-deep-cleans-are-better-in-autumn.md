@@ -65,4 +65,4 @@ We tend to ‘eat in’ more in winter, so make room for all those homemade soup
 - Soak your chopping boards
 - Degrease range hood filters
 
-If external house maintenance is becoming a stressful part of each season, a retirement village may be a good option. At [Highgrove Village](/), we take all external maintenance off your hands so you can enjoy the changing seasons stress-free. If this sounds like a good option for you, we would love to [get in touc](/location#enquire)h.
+If external house maintenance is becoming a stressful part of each season, a retirement village may be a good option. At [Highgrove Village](/), we take all external maintenance off your hands so you can enjoy the changing seasons stress-free. If this sounds like a good option for you, we would love to [get in touc](/contact)h.

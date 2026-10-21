@@ -28,7 +28,7 @@ Arguably the most important part of retirement financing is budgeting. Financial
 
 ## Ask for Help
 
-Many retiree’s get stuck when they are afraid to ask for help. There are many resources, and individuals that can help you maximise your retirement, and get the most out of the years you’ve worked so hard for. Consider reaching out to family to discuss your long-term finances, and let them know of your wants. You can also use one of the provided resources for additional help. For questions concerning what you can expect financially from living at a retirement village, please [contact us](/location#enquire) with any questions.
+Many retiree’s get stuck when they are afraid to ask for help. There are many resources, and individuals that can help you maximise your retirement, and get the most out of the years you’ve worked so hard for. Consider reaching out to family to discuss your long-term finances, and let them know of your wants. You can also use one of the provided resources for additional help. For questions concerning what you can expect financially from living at a retirement village, please [contact us](/contact) with any questions.
 
 **Money Talks Hotline:** 0800 345 123
 

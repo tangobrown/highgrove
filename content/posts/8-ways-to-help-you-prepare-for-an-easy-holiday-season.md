@@ -54,4 +54,4 @@ The summer sun, a time to see friends and family, delicious food – Christmas a
 
 **Bonus tip:** One of the truly wonderful ways to embrace the spirit of Christmas is to spread joy – [read our blog from last year that has 5 ideas of ways to give to others](/blog/5-wonderful-ways-to-spread-joy-this-christmas).
 
-If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch](/location#enquire)
+If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch](/contact)

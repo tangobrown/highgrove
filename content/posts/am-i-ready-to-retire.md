@@ -36,4 +36,4 @@ Do you have big plans for retirement? Just want to get the garage cleared out an
 
 In the end, no amount of prepping or lists can tell you what you already know – whether you feel ready. Like all life changes, there is no set time where you are expected to be ready. If you feel ready and have your ducks in a row at 55, listen to yourself and take those next steps. If you are ‘logically’ ready, and are over 65 but still want to be working, keep working. Are you ready to retire?
 
-If you have any questions, we would love to hear from you. [Get in touch here](/location#enquire).
+If you have any questions, we would love to hear from you. [Get in touch here](/contact).

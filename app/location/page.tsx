@@ -14,14 +14,12 @@ import { Eyebrow } from "@/components/ui/Typography";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact & Location | Retirement Village Albany | Highgrove",
+  title: "Our Location | Retirement Village Albany | Highgrove",
   description:
-    "Visit Highgrove Retirement Village at 119 Albany Highway, Unsworth Heights, Albany, close to shops, clubs and parks. Call 09 444 6689 or send an enquiry.",
+    "Highgrove Retirement Village is in Unsworth Heights, Albany: surrounded by bush, yet close to shopping, clubs, parks and the North Shore’s beaches.",
   path: "/location",
   image: { src: "/images/circle-entrance.png", alt: "The village entrance and gardens" },
 });
-
-const MAP_EMBED = "https://www.google.com/maps?q=119+Albany+Highway,+Unsworth+Heights,+Auckland&output=embed";
 
 const directions: { label: string; text: ReactNode }[] = [
   { label: "Main entrance", text: `${site.address.street}, ${site.address.suburb}` },
@@ -73,7 +71,7 @@ export default function LocationPage() {
           </div>
           <iframe
             title="Map showing Highgrove Retirement Village"
-            src={MAP_EMBED}
+            src={site.mapEmbed}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             className="block min-h-[440px] w-full rounded-[28px] border-0 bg-border"

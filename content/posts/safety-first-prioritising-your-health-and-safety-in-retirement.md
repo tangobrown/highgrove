@@ -58,4 +58,4 @@ Which is why one of the most beneficial things about living in a lifestyle villa
 
 Throughout Covid-19 here at Highgrove, we have been able to keep our residents safe, by maintaining strict protocols inside our villages. But we have also been able to continue to care for them, ensuring their health is still prioritised and that they have everything needed to continue with their day-to-day living. And we’re proud to be able to help ease their worries during this stressful time.
 
-If you think you might like to find out more about what life is like at our lifestyle village, [we’d](/location#enquire) love to hear from you. We welcome your enquiry and will get back to you as soon as possible.
+If you think you might like to find out more about what life is like at our lifestyle village, [we’d](/contact) love to hear from you. We welcome your enquiry and will get back to you as soon as possible.

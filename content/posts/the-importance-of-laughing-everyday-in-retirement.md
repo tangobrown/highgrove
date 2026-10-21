@@ -48,4 +48,4 @@ Right, now that you’re sold on how important it is to laugh, now for the fun p
 >
 > — E. E. Cummings
 
-If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch](/location#enquire)
+If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch](/contact)

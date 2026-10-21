@@ -37,8 +37,8 @@ const DEFAULT_AUTHOR = { name: "Highgrove team", role: "Highgrove Village", avat
 const ROUTES = {
   "": "/",
   "home": "/",
-  "contact-us": "/location#enquire",
-  "contact": "/location#enquire",
+  "contact-us": "/contact",
+  "contact": "/contact",
   "frequently-asked-questions": "/faqs",
   "faqs": "/faqs",
   "village": "/facilities",

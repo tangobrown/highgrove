@@ -48,4 +48,4 @@ Some of the ways we promote social engagement at our retirement village include:
 
 At our retirement village, we believe that social engagement is a key component of a happy and fulfilling retirement. Whether you’re looking for new friends, fun activities, or opportunities to give back, a retirement village can provide the support and resources you need to enhance your social life.
 
-If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch.](/location#enquire)
+If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch.](/contact)

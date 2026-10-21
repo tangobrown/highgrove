@@ -38,4 +38,4 @@ Living alone can be quite isolating, especially if you are used to a house full 
 
 The benefits of village living extend past the convenience of living in proximity to like-minded individuals, there are also numerous activities and groups. Join your friends for Zumba, board games or our Sunday Roast. Alternatively, you retain the ability to go and join community groups or explore your community.
 
-Getting involved in your community is one of the best ways to beat retirement loneliness, improve your quality of life and find activities and people you love. If you would like to hear more or are looking for advice, we’d love to [get in touch.](/location#enquire)
+Getting involved in your community is one of the best ways to beat retirement loneliness, improve your quality of life and find activities and people you love. If you would like to hear more or are looking for advice, we’d love to [get in touch.](/contact)

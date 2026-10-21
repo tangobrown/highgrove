@@ -46,4 +46,4 @@ As this year starts, it’s the perfect opportunity to look back. Consider booki
 
 Wherever 2020 takes you, we hope you stay healthy, happy, and hope to see you soon. Happy New Year!
 
-If you have any questions or are interested in retirement living in 2020, we would love to hear from you! [Get in touch](/location#enquire)
+If you have any questions or are interested in retirement living in 2020, we would love to hear from you! [Get in touch](/contact)

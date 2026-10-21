@@ -42,4 +42,4 @@ Did you know that there are 96 beaches in Auckland? Surrounded by sea, there is 
 
 A little bit north of Albany is the fun-filled Silverdale Adventure Park. Perfect for all ages, this location has great food options, and plenty to do. Currently, there are eight different rides, as well as a play zone and cafe.
 
-Highgrove is a part of a vibrant and growing community, with the perfect balance of peace at home, and being connected with this area. If you are curious about what it’s like living in a retirement village, we’d love to [get in touch](/location#enquire).
+Highgrove is a part of a vibrant and growing community, with the perfect balance of peace at home, and being connected with this area. If you are curious about what it’s like living in a retirement village, we’d love to [get in touch](/contact).

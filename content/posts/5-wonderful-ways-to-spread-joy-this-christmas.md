@@ -52,7 +52,7 @@ Sometimes one of the most valuable things you can give at Christmas is your time
 
 We hope that the above ideas have inspired you to think about how you can embrace the spirit of Christmas and give to others at a time when there is so much need. Because there is no such thing as a small deed – it will always impact the receiver in more ways than you could probably ever know!
 
-If you have any questions or are interested in retirement living in 2022, we would love to hear from you! [Get in touch](/location#enquire)
+If you have any questions or are interested in retirement living in 2022, we would love to hear from you! [Get in touch](/contact)
 
 Whether you are with us, or enjoying your time at a distance, Happy Holidays and we look forward to seeing you in the New Year.
 

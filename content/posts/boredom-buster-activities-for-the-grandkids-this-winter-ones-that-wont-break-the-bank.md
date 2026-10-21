@@ -54,4 +54,4 @@ If you have a rumpus room or space in the garage, hand over some blankets, boxes
 
 When we live somewhere for long enough, we tend to forget all the fun and excitement of places to visit that are close to home. Thankfully the internet is a gold mine for suggestions on what to do, for free, in your local area – [like the AA Travel website here](https://www.aa.co.nz/travel/things-to-do/) – so do a search for your region and see what pops up, you’ll probably be really surprised! Then get the kids rugged up with raincoats, gumboots and umbrellas, and go for an explore.
 
-If you have any questions, we would love to hear from you. [Get in touch here](/location#enquire).
+If you have any questions, we would love to hear from you. [Get in touch here](/contact).

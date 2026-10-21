@@ -52,4 +52,4 @@ Well, that just goes to show why our village gardeners are always so busy – be
 
 Happy winter gardening!
 
-If you think you might like to find out more about what life is like at our lifestyle village, [we’d love to hear from you](/location#enquire). We welcome your enquiry and will get back to you as soon as possible.
+If you think you might like to find out more about what life is like at our lifestyle village, [we’d love to hear from you](/contact). We welcome your enquiry and will get back to you as soon as possible.

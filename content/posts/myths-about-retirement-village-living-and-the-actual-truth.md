@@ -42,4 +42,4 @@ However, you may be quite surprised by what’s on offer, it’s not just all �
 
 The truth is, retirement villages are focused on allowing people to live more independently than they would on their own out in the community. This is because there are a range of options to suit someone’s level of required assistance, which is able to be changed when their needs change. With many on-site services, on-call care, services and recreation facilities, it enables more people to live their life to the fullest, in whatever way they please.
 
-So, has your view of living in a retirement village changed? We hope so! Of course, if you have any other questions or ‘myths’ that need to be busted, you can always [contact us to have a chat](/location#enquire). We’d love to hear from you.
+So, has your view of living in a retirement village changed? We hope so! Of course, if you have any other questions or ‘myths’ that need to be busted, you can always [contact us to have a chat](/contact). We’d love to hear from you.

@@ -62,4 +62,4 @@ Don’t have time to get into the bank, or need to do a food shop but you’re a
 
 Technology is about adding convenience to your life, not adding stress or anxiety about having to use it. So find someone in your local region who can help to grow your confidence ([Seniornet](https://seniornet.nz/) is a great place to start) and benefit from all of the ways it can elevate your retirement.
 
-If you think you might like to find out more about what life is like at our lifestyle village, [we’d love to hear from you](/location#enquire). We welcome your enquiry and will get back to you as soon as possible.
+If you think you might like to find out more about what life is like at our lifestyle village, [we’d love to hear from you](/contact). We welcome your enquiry and will get back to you as soon as possible.

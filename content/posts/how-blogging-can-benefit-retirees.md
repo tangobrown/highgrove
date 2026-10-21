@@ -36,4 +36,4 @@ Not only can you find like-minded people through blogs, but you can find people 
 
 Build your community, reconnect with loved ones, and tell your story through blogs. The world is your oyster on the internet, so go, write! We’d love to hear your stories.
 
-To explore what living at Highgrove Retirement Village is like, [book a viewing](/location#enquire) or read more on our [website](/).
+To explore what living at Highgrove Retirement Village is like, [book a viewing](/contact) or read more on our [website](/).

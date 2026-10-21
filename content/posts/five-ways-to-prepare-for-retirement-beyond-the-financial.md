@@ -38,4 +38,4 @@ As you approach retirement, it’s important to think about your living situatio
 
 Preparing for retirement is about more than just finances. By thinking about your lifestyle, health, social network, sense of purpose, and living situation, you can create a retirement plan that is tailored to your needs and interests. With a little planning and preparation, you can enjoy a fulfilling and rewarding retirement.
 
-If a retirement village is part of your dream retirement, [get in touch!](/location#enquire) We would love to show you around our home.
+If a retirement village is part of your dream retirement, [get in touch!](/contact) We would love to show you around our home.

@@ -52,4 +52,4 @@ Herbs that thrive inside during the winter months include:
 - Thyme – delicious in crockpots or stews.
 - Parsley – tasty with potatoes and butter.
 
-If you have any questions, we would love to hear from you. [Get in touch here](/location#enquire).
+If you have any questions, we would love to hear from you. [Get in touch here](/contact).

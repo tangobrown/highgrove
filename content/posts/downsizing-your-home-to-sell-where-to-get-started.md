@@ -56,4 +56,4 @@ Don’t ever feel rushed or pressured into anything, and if needed, you can alwa
 
 Now it’s time to let your home take over and get itself sold!
 
-If you need help with your retirement planning or would like to visit Highgrove, [please get in touch](/location#enquire). We look forward to hearing from you!
+If you need help with your retirement planning or would like to visit Highgrove, [please get in touch](/contact). We look forward to hearing from you!

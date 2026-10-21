@@ -14,7 +14,7 @@ featured: false
 wpId: 3846
 ---
 
-There are currently about 40,000 New Zealanders living in retirement villages, but that doesn’t mean that the whole industry is shrouded in a little bit of mystery. A part of this comes from decades-old misconceptions on what a retirement village really is, and a part of it from how village rules, amenities and policies vary drastically from village to village. As an independent and family-owned village, Highgrove has the opportunity to offer our residents options that other, larger villages cannot. Today, we will answer some of the most common questions we get about life in a retirement village. If you have any questions not answered here, we are always happy to [chat](/location#enquire)!
+There are currently about 40,000 New Zealanders living in retirement villages, but that doesn’t mean that the whole industry is shrouded in a little bit of mystery. A part of this comes from decades-old misconceptions on what a retirement village really is, and a part of it from how village rules, amenities and policies vary drastically from village to village. As an independent and family-owned village, Highgrove has the opportunity to offer our residents options that other, larger villages cannot. Today, we will answer some of the most common questions we get about life in a retirement village. If you have any questions not answered here, we are always happy to [chat](/contact)!
 
 ## Can I bring my cat?
 
@@ -44,4 +44,4 @@ One of the best parts of Highgrove Village is this is entirely up to you. If you
 
 Nope! However, you may find the allure of 3pm lawn bowls too strong to stay away. Highgrove is perfect for the retired, the part-time or those still wishing to work full time.
 
-We know choosing the right retirement village can be a challenge if you have any questions or enquiries, don’t hesitate to [get in touch](/location#enquire).
+We know choosing the right retirement village can be a challenge if you have any questions or enquiries, don’t hesitate to [get in touch](/contact).

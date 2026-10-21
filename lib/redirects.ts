@@ -15,7 +15,7 @@ const pages: Record<string, string> = {
   home: "/",
   village: "/facilities",
   "about-us": "/about",
-  "contact-us": "/location#enquire",
+  "contact-us": "/contact",
   thanks: "/",
   "frequently-asked-questions": "/faqs",
   "independent-living": "/independent-living",

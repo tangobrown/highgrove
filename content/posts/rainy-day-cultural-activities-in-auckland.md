@@ -48,4 +48,4 @@ The Civic Cinema is a beautifully restored historic cinema that screens a range 
 
 No matter the weather, Auckland has an abundance of exciting, beautiful, and engaging activities. From our Albany hub, you are well connected to explore everything Tāmaki Makaurau has to offer.
 
-If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch.](/location#enquire)
+If you have any questions or are interested in retirement living in 2023, we would love to hear from you! [Get in touch.](/contact)

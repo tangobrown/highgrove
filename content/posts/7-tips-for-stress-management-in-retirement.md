@@ -46,4 +46,4 @@ Self-care is an important part of stress management. Taking time for yourself to
 
 In summary, by staying active, practicing relaxation techniques, staying connected, eating a balanced diet, getting enough sleep, managing finances effectively, and practicing self-care, you can improve your stress management skills and reduce the impact of stress on your life. At our retirement village, we understand the importance of stress management and offer a range of resources and support to help residents manage stress effectively.
 
-If you are feeling stressed about finding your dream retirement village – we can help! Read our [open day checklist](/blog/open-day-checklist), and [get in touch. We would love to hear from you](/location#enquire)
+If you are feeling stressed about finding your dream retirement village – we can help! Read our [open day checklist](/blog/open-day-checklist), and [get in touch. We would love to hear from you](/contact)

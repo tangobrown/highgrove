@@ -60,4 +60,4 @@ If you think you have been scammed, even if you aren’t sure, report it to eith
 
 Scammers come in all shapes and sizes, and most can be extremely convincing. If you are the victim of a scam, don’t feel embarrassed or that you’re at fault. For more information about online scams, check out [Netsafe](https://www.netsafe.org.nz/), [New Zealand Police](https://www.police.govt.nz/advice/email-and-internet-safety/internet-scams-spam-and-fraud), [Sorted.org.nz](https://sorted.org.nz/guides/protecting-wealth/fraud-and-scams) and [Eldernet](https://www.eldernet.co.nz/knowledge-lab/what-can-i-do-to-protect-myself-from-being-scammed).
 
-If you think you might like to find out more about what life is like at our lifestyle village, [we’d love to hear from you](/location#enquire). We welcome your enquiry and will get back to you as soon as possible.
+If you think you might like to find out more about what life is like at our lifestyle village, [we’d love to hear from you](/contact). We welcome your enquiry and will get back to you as soon as possible.

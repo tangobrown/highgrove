@@ -28,13 +28,13 @@ Are you planning on Christmas in the tropical sun, or in the magical Yuletide ma
 
 ## Book a Room
 
-Christmas can be a difficult time for those with reduced mobility. Holding a Christmas for everyone can become a real challenge when family homes aren’t fully equipped. Our village has a large community room, equipped with a small kitchen and dishwasher, that is available to book for our residents. Central, supported and fully equipped for those of all mobility levels, our rooms are a great options for Christmas day, holiday parties or even just a family get together. If you are interested, please [get in touch with our village manager](/location#enquire).
+Christmas can be a difficult time for those with reduced mobility. Holding a Christmas for everyone can become a real challenge when family homes aren’t fully equipped. Our village has a large community room, equipped with a small kitchen and dishwasher, that is available to book for our residents. Central, supported and fully equipped for those of all mobility levels, our rooms are a great options for Christmas day, holiday parties or even just a family get together. If you are interested, please [get in touch with our village manager](/contact).
 
 ## Whip Up a Feast!
 
 Are you a pavlova whiz, or world-famous for your scalloped potatoes? Good news, each of our apartments come with fully-functional kitchens, with the latest appliances. You have enough room for your sous chef and enough fridge space for any leftovers! If you are not a keen cook, we, as always, have our catered meals that can be delivered to you or served in our dining room.
 
-Christmas is a magical time to be spent with friends, family, and loved ones. If you are looking for some help, or have any questions, we are always available to talk. [Get in touch](/location#enquire).
+Christmas is a magical time to be spent with friends, family, and loved ones. If you are looking for some help, or have any questions, we are always available to talk. [Get in touch](/contact).
 
 Whether you are with us, or enjoying your time away from all of us, Happy Holidays and we look forward to seeing you in the New Year.
 
