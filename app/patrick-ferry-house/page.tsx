@@ -153,7 +153,7 @@ export default function PatrickFerryHousePage() {
               We’re a member of the New Zealand Aged Care Association, and recommend their website for information on
               admission into an aged care hospital or rest home.
             </p>
-            <TextLink href="https://www.findaresthome.co.nz">findaresthome.co.nz</TextLink>
+            <TextLink href="https://aca.org.nz/">New Zealand Aged Care Association website</TextLink>
           </div>
         </div>
       </Section>

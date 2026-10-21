@@ -67,7 +67,7 @@ export const organizationSchema = {
   ],
   memberOf: [
     { "@type": "Organization", name: "Retirement Villages Association of New Zealand" },
-    { "@type": "Organization", name: "New Zealand Aged Care Association" },
+    { "@type": "Organization", name: "New Zealand Aged Care Association", url: "https://aca.org.nz/" },
   ],
 };
 
@@ -96,7 +96,7 @@ export const nursingHomeSchema = {
   areaServed,
   parentOrganization: { "@id": ORG_ID },
   knowsAbout: careServices,
-  memberOf: { "@type": "Organization", name: "New Zealand Aged Care Association" },
+  memberOf: { "@type": "Organization", name: "New Zealand Aged Care Association", url: "https://aca.org.nz/" },
 };
 
 export const contactPageSchema = {
